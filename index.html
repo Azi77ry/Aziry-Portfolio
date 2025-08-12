@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziry_Portfolio</title>
+    <meta name="description" content="Advanced portfolio featuring AI integration, 3D elements, and real-time data">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image.css">
+ 
+
+</head>
+<body>
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><span></span>Azizi-Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#index">Projects</a></li>
+            <li><a href="#ai">AI Assistant</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Azizi Iddi</span></h1>
+            <div class="typed-text"></div>
+            <p>Full Stack Developer & AI Specialist creating cutting-edge digital experiences with modern web technologies and artificial intelligence.</p>
+            <a href="#index" class="btn">View My Work</a>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
+                <a href="#"><i class="fab fa-codepen"></i></a>
+            </div>
+        </div>
+        
+        <!-- 3D Model Container -->
+        <div class="model-container" id="model-container">
+            <!-- Three.js model will be rendered here -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Who I Am</h3>
+                <p>I'm a passionate full-stack developer with expertise in JavaScript, React, Node.js, and AI integration. With over 7 years of experience, I've helped startups and enterprises build innovative digital solutions.</p>
+                <p>My approach combines technical excellence with creative problem-solving to deliver exceptional user experiences powered by the latest technologies.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="120">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="45">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="7">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-charts">
+                <div class="chart-container">
+                    <h4 class="chart-title">Frontend Skills</h4>
+                    <canvas id="frontendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-title">Backend Skills</h4>
+                    <canvas id="backendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-title">AI/ML Skills</h4>
+                    <canvas id="aiChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-title">DevOps Skills</h4>
+                    <canvas id="devopsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title">My Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AI E-commerce Platform">
+                <div class="portfolio-item-content">
+                    <h3>AI E-commerce Platform</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <p>An intelligent e-commerce platform with personalized recommendations using machine learning algorithms.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Blockchain Dashboard">
+                <div class="portfolio-item-content">
+                    <h3>Blockchain Analytics Dashboard</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Web3.js</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Solidity</span>
+                        <span class="tech-tag">Ethereum</span>
+                    </div>
+                    <p>Real-time dashboard for tracking cryptocurrency transactions and smart contract interactions.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AR Navigation App">
+                <div class="portfolio-item-content">
+                    <h3>AR Navigation App</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">ARKit</span>
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">CoreML</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <p>Augmented reality navigation system with real-time object recognition and pathfinding.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="IoT Smart Home System">
+                <div class="portfolio-item-content">
+                    <h3>IoT Smart Home System</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">React Native</span>
+                    </div>
+                    <p>Complete smart home automation system with voice control and energy optimization.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Neural Network Visualizer">
+                <div class="portfolio-item-content">
+                    <h3>Neural Network Visualizer</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TensorFlow.js</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">D3.js</span>
+                    </div>
+                    <p>Interactive 3D visualization tool for understanding neural network architectures.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Quantum Computing Simulator">
+                <div class="portfolio-item-content">
+                    <h3>Quantum Computing Simulator</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Qiskit</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">WebAssembly</span>
+                    </div>
+                    <p>Browser-based quantum circuit simulator with drag-and-drop interface.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- In your HTML (replace the existing AI section) -->
+<div class="ai-assistant">
+    <h2 class="section-title">AI Assistant</h2>
+    <div class="ai-container">
+        <div class="ai-avatar">
+             <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="AI Assistant">
+        </div>
+        <div class="ai-message">
+            <p id="ai-response">Hello! I'm your AI assistant. Ask me about my skills, projects, or experience.</p>
+        </div>
+        <div class="ai-input">
+            <input type="text" id="ai-question" placeholder="Ask me anything...">
+            <button id="ai-submit"><i class="fas fa-paper-plane"></i> Ask</button>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Location</h3>
+                        <p>Dar es salaam, Tanzania</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <a href="mailto:Aziziiddi555@gmail.com">Aziziiddi555@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Phone</h3>
+                        <a href="tel:+255692350076">+255-69235-0076</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Availability</h3>
+                        <p>Monday - Friday: 9am - 5pm PST</p>
+                    </div>
+                </div>
+                
+                <!-- Interactive Map -->
+                <div id="map"></div>
+            </div>
+            
+            <div class="contact-form">
+              <form action="https://formsubmit.co/aziziiddi555@gmail.com" method="POST">
+    <!-- Hidden FormSubmit Parameters -->
+    <input type="hidden" name="_subject" value="New message from your portfolio!">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://yourportfolio.com/thank-you.html"> <!-- Replace with your actual URL -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none"> <!-- Anti-spam honeypot -->
+
+    <!-- Visible Form Fields -->
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+    </div>
+    <button type="submit" class="btn">Send Message</button>
+</form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="waves"></div>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">TechPortfolio</a>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#index">Projects</a>
+                <a href="#ai">AI Assistant</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
+                <a href="#"><i class="fab fa-codepen"></i></a>
+            </div>
+            <p class="copyright">© 2023 TechPortfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js" defer></script>
+    <script src="ai-knowledge.js" defer></script>
+
+       
+</body>
+</html>
