@@ -123,8 +123,9 @@
         });
 
         // Initialize Google Maps
-        function initMap() {
-            const location = { lat: 37.7749, lng: -122.4194 }; // San Francisco
+        function initMap() {``
+          const location = { lat: -6.7924, lng: 39.2083 }; //DSM
+
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 12,
                 center: location,
