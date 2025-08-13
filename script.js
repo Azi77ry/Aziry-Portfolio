@@ -108,13 +108,16 @@
         // Typed.js initialization
         const typed = new Typed('.typed-text', {
             strings: [
-                'AI Developer',
-                'Blockchain Engineer',
-                'Full Stack Developer',
-                'Quantum Computing Enthusiast',
-                'Tech Innovator'
+                'Artificial Intelligent (AI) Developer',
+                'Machine learning engineering',
+                'System Design and Web Developer',
+                'Data Analysis With Full Visualization And Interpetation',
+                'Big Data Analysis',
+                'Database Management',
+                'IT support And Technology Innovations'
+
             ],
-            typeSpeed: 50,
+            typeSpeed: 70,
             backSpeed: 30,
             loop: true,
             showCursor: true,
