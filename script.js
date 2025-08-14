@@ -288,10 +288,10 @@
         const frontendChart = new Chart(frontendCtx, {
             type: 'radar',
             data: {
-                labels: ['React', 'Vue', 'Angular', 'TypeScript', 'CSS/Sass', 'WebGL'],
+                labels: ['Python', 'PHP', 'Javascript', 'SQL', 'CSS/Bootstrap', 'C++'],
                 datasets: [{
                     label: 'Frontend Skills',
-                    data: [95, 80, 70, 90, 85, 75],
+                    data: [95, 80, 70, 90, 95, 75],
                     backgroundColor: 'rgba(0, 240, 255, 0.2)',
                     borderColor: 'rgba(0, 240, 255, 1)',
                     borderWidth: 2,
@@ -334,7 +334,7 @@
         const backendChart = new Chart(backendCtx, {
             type: 'bar',
             data: {
-                labels: ['Node.js', 'Python', 'Java', 'C#', 'PHP', 'Go'],
+                labels: ['Node.js', 'Python', 'Javascript', 'Django', 'PHP', 'SQL'],
                 datasets: [{
                     label: 'Backend Skills',
                     data: [90, 85, 75, 80, 70, 65],
@@ -392,7 +392,7 @@
         const aiChart = new Chart(aiCtx, {
             type: 'doughnut',
             data: {
-                labels: ['TensorFlow', 'PyTorch', 'OpenCV', 'NLP', 'Reinforcement', 'GANs'],
+                labels: ['TensorFlow', 'Regressions', 'OpenCV', 'NLP', 'Reinforcement', 'ML-Algorithims'],
                 datasets: [{
                     label: 'AI/ML Skills',
                     data: [85, 80, 75, 70, 65, 60],
@@ -425,7 +425,7 @@
         const devopsChart = new Chart(devopsCtx, {
             type: 'line',
             data: {
-                labels: ['Docker', 'Kubernetes', 'AWS', 'CI/CD', 'Terraform', 'Monitoring'],
+                labels: ['', 'Kubernetes', 'AWS', 'CI/CD', 'Terraform', 'Monitoring'],
                 datasets: [{
                     label: 'DevOps Skills',
                     data: [85, 80, 75, 90, 70, 80],
