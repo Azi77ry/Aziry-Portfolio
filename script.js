@@ -392,7 +392,7 @@
         const aiChart = new Chart(aiCtx, {
             type: 'doughnut',
             data: {
-                labels: ['TensorFlow', 'Regressions', 'OpenCV', 'NLP', 'Reinforcement', 'ML-Algorithims'],
+                labels: ['TensorFlow', 'Regressions', 'Scikit-Learn', 'NLP', 'Reinforcement', 'ML-Algorithims'],
                 datasets: [{
                     label: 'AI/ML Skills',
                     data: [85, 80, 75, 70, 65, 60],
