@@ -172,7 +172,7 @@
             </div>
             
             <div class="portfolio-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4uLeMJlsO-hVPSJJpJjyr3EJ7N2bljWuhRQ&s" alt="IoT Smart Home System">
+                <img src="https://www.digitalauthority.me/wp-content/uploads/2024/01/shutterstock_2414370939-1.jpg" alt="IoT Smart Home System">
                 <div class="portfolio-item-content">
                     <h3>Sales analystic & visualization</h3>
                     <div class="tech-tags">
@@ -295,7 +295,7 @@
             </div>
             
             <div class="contact-form">
-              <form action="https://formsubmit.co/aziziiddi555@gmail.com" method="POST">
+              <form id="contactForm" action="https://formsubmit.co/aziziiddi555@gmail.com" method="POST">
     <!-- Hidden FormSubmit Parameters -->
     <input type="hidden" name="_subject" value="New message from your portfolio!">
     <input type="hidden" name="_template" value="table">
@@ -349,16 +349,37 @@
         </div>
     </footer>
 
+    <!-- AI Chatbot Toggle Button -->
+    <div class="chatbot-toggle">
+        <i class="fas fa-robot"></i>
+    </div>
+
     <!-- Back to Top Button -->
     <div class="back-to-top">
         <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- AI Chatbot Interface -->
+    <div id="ai-chatbot-interface" class="ai-chatbot-window">
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button class="chatbot-close-btn">&times;</button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="message ai-message">
+                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-input-area">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQF5FJXX7CY8c705twPHaPTraeGRIx0FA&callback=initMap" async defer></script>
     <script src="script.js" defer></script>
-    <script src="ai-knowledge.js" defer></script>
 
        
 </body>
