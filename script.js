@@ -425,7 +425,7 @@
         const devopsChart = new Chart(devopsCtx, {
             type: 'line',
             data: {
-                labels: ['', 'Kubernetes', 'AWS', 'CI/CD', 'Terraform', 'Monitoring'],
+                labels: ['Git&GitHub','cloud computing','Docker', 'Kubernetes', 'Terraform', 'Monitoring'],
                 datasets: [{
                     label: 'DevOps Skills',
                     data: [85, 80, 75, 90, 70, 80],
