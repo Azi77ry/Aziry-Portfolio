@@ -10,9 +10,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
-const allowedOrigin = process.env.FRONTEND_URL || '*';
+const rawAllowedOrigin = process.env.FRONTEND_URL || '*';
+const allowedOrigin = rawAllowedOrigin === '*' ? '*' : rawAllowedOrigin.replace(/\/$/, '');
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', allowedOrigin);
+  const requestOrigin = req.headers.origin;
+  if (allowedOrigin === '*' || !requestOrigin) {
+    res.header('Access-Control-Allow-Origin', allowedOrigin);
+  } else {
+    const normalizedRequestOrigin = requestOrigin.replace(/\/$/, '');
+    if (normalizedRequestOrigin === allowedOrigin) {
+      res.header('Access-Control-Allow-Origin', requestOrigin);
+    } else {
+      res.header('Access-Control-Allow-Origin', allowedOrigin);
+    }
+  }
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
   if (req.method === 'OPTIONS') return res.sendStatus(200);
