@@ -125,11 +125,11 @@
             smartBackspace: true
         });
 
-        // Initialize Google Maps
-        function initMap() {
-          const location = { lat: -6.7924, lng: 39.2083 }; //DSM
+                // Initialize Google Maps
+                window.initMap = function() {
+                    const location = { lat: -6.7924, lng: 39.2083 }; //DSM
 
-            const map = new google.maps.Map(document.getElementById("map"), {
+                        const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 12,
                 center: location,
                 styles: [
