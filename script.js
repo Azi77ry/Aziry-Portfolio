@@ -722,22 +722,46 @@
         //     if (e.key === 'Enter') respondToQuestion();
         // });
 
+        const BACKEND_BASE_URL = window.BACKEND_BASE_URL || '';
+        const CONTACT_API_URL = BACKEND_BASE_URL ? `${BACKEND_BASE_URL}/api/contact` : '/api/contact';
+
         // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            // Removed subject as it's not in the new HTML for contact form
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For demonstration, we'll just show an alert
-            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon at ${email}.`);
-            
-            // Reset the form
-            this.reset();
+
+            const statusEl = document.getElementById('contactStatus');
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            statusEl.textContent = '';
+            statusEl.className = 'contact-status';
+
+            try {
+                const response = await fetch(CONTACT_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, message })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    statusEl.textContent = result.message || 'Unable to send message. Please try again later.';
+                    statusEl.classList.add('error');
+                    return;
+                }
+
+                statusEl.textContent = 'Thank you! Your message was sent successfully.';
+                statusEl.classList.add('success');
+                this.reset();
+            } catch (error) {
+                statusEl.textContent = 'An error occurred while sending your message. Please try again later.';
+                statusEl.classList.add('error');
+                console.error('Contact form error:', error);
+            }
         });
 
         // Simple 3D model with Three.js

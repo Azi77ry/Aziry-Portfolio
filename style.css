@@ -719,6 +719,28 @@
             resize: vertical;
         }
 
+        .contact-status {
+            margin-bottom: 1rem;
+            padding: 0.9rem 1rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #e0f7ff;
+            background: rgba(0, 240, 255, 0.09);
+            border: 1px solid rgba(0, 240, 255, 0.18);
+        }
+
+        .contact-status.success {
+            background: rgba(64, 255, 128, 0.12);
+            border-color: rgba(64, 255, 128, 0.25);
+            color: #d4ffda;
+        }
+
+        .contact-status.error {
+            background: rgba(255, 64, 100, 0.12);
+            border-color: rgba(255, 64, 100, 0.25);
+            color: #ffd8df;
+        }
+
         #map {
             height: 300px;
             width: 100%;

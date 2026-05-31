@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aziry_Portfolio</title>
+    <title>Azizi Mohamed Portfolio</title>
     <meta name="description" content="Advanced portfolio featuring AI integration, 3D elements, and real-time data">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -39,9 +39,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm <span>Azizi Iddi</span></h1>
+            <h1>Hi, I'm <span>Azizi Iddi Mohamed</span></h1>
             <div class="typed-text"></div>
-            <p>Full Stack Developer & Machine learning Researcher,  AI Specialist creating cutting-edge digital experiences with modern web technologies and artificial intelligence , Big data analystic , Database management and design, Computer Network and communication, IT Supporter .</p>
+            <p>Full Stack Developer & Machine learning Researcher,Data Scientist,AI Specialist creating cutting-edge digital experiences with modern web technologies and artificial intelligence , Big data analystic , Database management and design, Computer Network and communication, IT Supporter .</p>
             <a href="#portfolio" class="btn">View My Work</a>
             <div class="social-icons">
                 <a href="https://github.com/Azi77ry"><i class="fab fa-github"></i></a>
@@ -76,7 +76,7 @@
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-count="45">0</div>
+                        <div class="stat-number" data-count="20">0</div>
                         <div class="stat-label">Happy Clients</div>
                     </div>
                     <div class="stat-item">
@@ -154,7 +154,7 @@
             </div>  
             
             <div class="portfolio-item">
-                <img src="https://mybikes.app/images/logo.png" alt="AR Navigation App">
+                <img src="images/boda.png" alt="boda App">
                 <div class="portfolio-item-content">
                     <h3>Bodaboda income management </h3>
                     <div class="tech-tags">
@@ -265,6 +265,40 @@
            
             </div>
 
+            <div class="portfolio-item">
+                <img src="Images/bot.png" alt="krevant tips">
+                <div class="portfolio-item-content">
+                    <h3>Whatsapp BOT</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Javascript.js</span>
+                        <span class="tech-tag">node.js</span>
+                        <span class="tech-tag">whatsapp api</span>
+                    </div>
+                    <p> The bot claims to provide:
+
+🤖 Auto Reply – Automatically responds to incoming messages.
+
+💬 AI Chat – AI-powered conversations with users.
+
+👥 Group Management – Tools for managing WhatsApp groups.
+
+🗑️ Anti Delete – View messages that others delete.
+
+⚡ Fast and Reliable – Emphasis on speed and stability.
+
+👁️ Anti View Once – View media sent as "view once."
+
+✅ Auto Status View – Automatically view WhatsApp statuses.
+
+❤️ Auto Status React – Automatically react to statuses.
+
+🕒 Works 24/7 – Continuous operation.
+
+📩 Private DM Auto Reply – Automatic replies in private chats.</p>
+                    
+                </div>
+            </div>
+
             
         </div>  
     </section>
@@ -336,19 +370,13 @@
             </div>
             
             <div class="contact-form">
-              <form id="contactForm" action="https://formsubmit.co/aziziiddi555@gmail.com" method="POST">
-    <!-- Hidden FormSubmit Parameters -->
-    <input type="hidden" name="_subject" value="New message from your portfolio!">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://azi77ry.github.io/Aziry-Portfolio/"> <!-- Replace with your actual URL -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="_honey" style="display:none"> <!-- Anti-spam honeypot -->
+              <form id="contactForm" action="/api/contact" method="POST">
+                <div id="contactStatus" class="contact-status"></div>
 
-    <!-- Visible Form Fields -->
-    <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    </div>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
     <div class="form-group">
         <label for="email">Your Email</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -385,8 +413,8 @@
                 <a href="https://www.instagram.com/aziry55?igsh=MWl4Z3VhOWNtOWxuNg=="><i class="fab fa-instagram"></i></a>
                 
             </div>
-            <p class="copyright">© 2025 Aziry_Portfolio. All rights reserved.</p>
-             <p class="copyright">powered by Aziry Technology.</p>
+            <p class="copyright">© 2025 Azizi Mohamed Portfolio. All rights reserved.</p>
+             <p class="copyright">Powered by Aziry Technology.</p>
         </div>
     </footer>
 
@@ -420,8 +448,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQF5FJXX7CY8c705twPHaPTraeGRIx0FA&callback=initMap" async defer></script>
+    <script src="frontend-config.js"></script>
     <script src="script.js" defer></script>
-
-       
 </body>
 </html>

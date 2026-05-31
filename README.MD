@@ -1,4 +1,4 @@
-# 🚀 Aziry Portfolio – Advanced Personal Website
+# 🚀 Azizi Portfolio – Advanced Personal Website
 
 An advanced, modern, and responsive **personal portfolio website** showcasing my skills, projects, and experience in **Full Stack Development, Artificial Intelligence, Data Science, and Web Technologies**.
 
@@ -29,7 +29,7 @@ This portfolio represents my journey, skills, and projects in:
 - 🤖 **AI Assistant Section** for interactive Q&A  
 - 🧠 **Project Portfolio Showcase** with live demos  
 - 🗺️ **Google Maps Integration**  
-- 📩 **Contact Form** with email delivery (FormSubmit)  
+- 📩 **Contact Form** with email delivery via Node.js backend  
 - 🔝 **Back-to-Top Button**  
 - 🌐 **Social Media Integration**  
 
@@ -53,7 +53,7 @@ This portfolio represents my journey, skills, and projects in:
 
 ### External Services
 - **Google Maps API**
-- **FormSubmit** (Contact form handling)
+- **Node.js backend** (Contact form email delivery)
 
 ---
 
@@ -113,14 +113,69 @@ Each project includes:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Azi77ry/Aziry-Portfolio.git
-Open the folder:
+   cd Aziry-Portfolio
+   ```
 
-bash
-Copy code
+2. Copy the environment example and update the SMTP credentials:
+   ```bash
+   copy .env.example .env
+   ```
+
+3. Install dependencies and start the server:
+   ```bash
+   npm install
+   npm start
+   ```
+
+4. Open `http://localhost:3000` in your browser.
+
+Copy the example environment file and fill in your SMTP credentials:
+
+```bash
 cd Aziry-Portfolio
-Open index.html in your browser.
+copy .env.example .env
+```
 
-✅ No backend setup required.
+Then install dependencies and start the server:
+
+```bash
+npm install
+npm start
+```
+
+Open `http://localhost:3000` in your browser.
+
+---
+
+## 📦 Deploy Frontend to Vercel
+
+1. Create a new Vercel project and connect this GitHub repository.
+2. Add `vercel.json` to the repo to force a static site deployment.
+3. Open `frontend-config.js` and set:
+
+```js
+window.BACKEND_BASE_URL = 'https://your-render-backend.onrender.com';
+```
+
+4. Deploy the frontend on Vercel.
+
+## 🚀 Deploy Backend to Render
+
+1. Create a new Render Web Service and connect this repo.
+2. Use these commands:
+   - Build command: `npm install`
+   - Start command: `npm start`
+3. Add these environment variables in Render:
+   - `SMTP_HOST`
+   - `SMTP_PORT`
+   - `SMTP_SECURE`
+   - `SMTP_USER`
+   - `SMTP_PASS`
+   - `CONTACT_EMAIL`
+   - `FRONTEND_URL` (your Vercel frontend URL)
+4. Deploy the backend.
+
+> The Vercel frontend will post contact messages to the Render backend.
 
 🔒 API Keys Notice
 This project uses:
