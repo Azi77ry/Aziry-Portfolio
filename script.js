@@ -126,7 +126,7 @@
         });
 
         // Initialize Google Maps
-        function initMap() {``
+        function initMap() {
           const location = { lat: -6.7924, lng: 39.2083 }; //DSM
 
             const map = new google.maps.Map(document.getElementById("map"), {
