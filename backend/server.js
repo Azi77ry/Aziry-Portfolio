@@ -1,14 +1,13 @@
 const express = require('express');
 const path = require('path');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname)));
 
 const rawAllowedOrigin = process.env.FRONTEND_URL || '*';
 const allowedOrigin = rawAllowedOrigin === '*' ? '*' : rawAllowedOrigin.replace(/\/$/, '');
@@ -75,8 +74,28 @@ app.post('/api/contact', async (req, res) => {
     return res.json({ message: 'Your message has been sent successfully.' });
   } catch (error) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ message: 'Unable to send email. Please try again later.' });
+    // If DEBUG=true or not in production, return the underlying error message to help debugging
+    const debug = process.env.DEBUG === 'true' || process.env.NODE_ENV !== 'production';
+    const resp = { message: 'Unable to send email. Please try again later.' };
+    if (debug) {
+      resp.error = error && (error.message || String(error));
+      resp.stack = error && error.stack;
+    }
+    return res.status(500).json(resp);
   }
+});
+
+app.get('/', (req, res) => {
+  res.json({
+    status: 'ok',
+    service: 'Aziry Portfolio Backend',
+    message: 'Backend is running successfully on Render',
+    time: new Date().toISOString()
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', uptime: process.uptime() });
 });
 
 app.listen(PORT, () => {

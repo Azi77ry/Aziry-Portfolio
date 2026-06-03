@@ -13,4 +13,4 @@ services:
       - key: SMTP_USER
       - key: SMTP_PASS
       - key: CONTACT_EMAIL
-    healthCheckPath: /
+    healthCheckPath: /health
