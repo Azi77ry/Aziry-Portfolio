@@ -62,7 +62,8 @@ app.post('/api/contact', async (req, res) => {
   }
 
   const mailOptions = {
-    from: `${name} <${email}>`,
+    from: smtpUser,
+    replyTo: `${name} <${email}>`,
     to: mailRecipient,
     subject: `Portfolio Contact from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
