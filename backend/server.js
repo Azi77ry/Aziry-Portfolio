@@ -88,7 +88,7 @@ app.post('/api/contact', async (req, res) => {
 app.get('/', (req, res) => {
   res.json({
     status: 'ok',
-    service: 'Aziry Portfolio Backend',
+    service: 'Azizi Portfolio Backend',
     message: 'Backend is running successfully on Render',
     time: new Date().toISOString()
   });
