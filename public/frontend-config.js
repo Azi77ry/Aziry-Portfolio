@@ -1,3 +1,3 @@
-// Set this value when deploying the frontend separately from the backend.
-// Example: window.BACKEND_BASE_URL = 'https://your-render-backend.onrender.com';
-window.BACKEND_BASE_URL = 'https://aziry-portfolio.onrender.com';
+﻿// Configuration for Aziry Tech Portfolio Frontend
+// Uses window.location.origin dynamically so it works seamlessly on azirytech.online, localhost, or any VPS
+window.BACKEND_BASE_URL = window.location.origin;

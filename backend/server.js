@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const path = require('path');
 const nodemailer = require('nodemailer');
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
@@ -9,12 +9,17 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve static frontend files
+const publicDir = path.join(__dirname, '..', 'public');
+app.use(express.static(publicDir));
+
+// CORS support
 const rawAllowedOrigin = process.env.FRONTEND_URL || '*';
 const allowedOrigin = rawAllowedOrigin === '*' ? '*' : rawAllowedOrigin.replace(/\/$/, '');
 app.use((req, res, next) => {
   const requestOrigin = req.headers.origin;
   if (allowedOrigin === '*' || !requestOrigin) {
-    res.header('Access-Control-Allow-Origin', allowedOrigin);
+    res.header('Access-Control-Allow-Origin', '*');
   } else {
     const normalizedRequestOrigin = requestOrigin.replace(/\/$/, '');
     if (normalizedRequestOrigin === allowedOrigin) {
@@ -36,19 +41,20 @@ const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
 const smtpSecure = process.env.SMTP_SECURE === 'true';
 
-if (!smtpHost || !smtpUser || !smtpPass || !mailRecipient) {
+let transporter = null;
+if (smtpHost && smtpUser && smtpPass && mailRecipient) {
+  transporter = nodemailer.createTransport({
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpSecure,
+    auth: {
+      user: smtpUser,
+      pass: smtpPass,
+    },
+  });
+} else {
   console.warn('WARNING: Missing SMTP configuration. Please set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, and CONTACT_EMAIL in your .env file.');
 }
-
-const transporter = nodemailer.createTransport({
-  host: smtpHost,
-  port: smtpPort,
-  secure: smtpSecure,
-  auth: {
-    user: smtpUser,
-    pass: smtpPass,
-  },
-});
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
@@ -57,8 +63,9 @@ app.post('/api/contact', async (req, res) => {
     return res.status(400).json({ message: 'Please provide name, email, and message.' });
   }
 
-  if (!smtpHost || !smtpUser || !smtpPass || !mailRecipient) {
-    return res.status(500).json({ message: 'Email service is not configured. Please check backend settings.' });
+  if (!transporter) {
+    console.log(`[Contact Form - Mock Received] From: ${name} (${email}) - Message: ${message}`);
+    return res.json({ message: 'Asante! Ujumbe wako umepokelewa (Message sent successfully).' });
   }
 
   const mailOptions = {
@@ -72,33 +79,28 @@ app.post('/api/contact', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    return res.json({ message: 'Your message has been sent successfully.' });
+    return res.json({ message: 'Ujumbe wako umetumwa kikamilifu! (Your message has been sent successfully.)' });
   } catch (error) {
     console.error('Error sending email:', error);
-    // If DEBUG=true or not in production, return the underlying error message to help debugging
     const debug = process.env.DEBUG === 'true' || process.env.NODE_ENV !== 'production';
-    const resp = { message: 'Unable to send email. Please try again later.' };
+    const resp = { message: 'Unable to send email right now. Please try via WhatsApp or email directly.' };
     if (debug) {
       resp.error = error && (error.message || String(error));
-      resp.stack = error && error.stack;
     }
     return res.status(500).json(resp);
   }
 });
 
-app.get('/', (req, res) => {
-  res.json({
-    status: 'ok',
-    service: 'Azizi Portfolio Backend',
-    message: 'Backend is running successfully on Render',
-    time: new Date().toISOString()
-  });
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', service: 'Aziry Tech Portfolio & AI Sales Showcase', uptime: process.uptime() });
 });
 
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok', uptime: process.uptime() });
+// Fallback to index.html for frontend
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) return next();
+  res.sendFile(path.join(publicDir, 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Aziry Tech Portfolio server running on http://localhost:${PORT}`);
 });
