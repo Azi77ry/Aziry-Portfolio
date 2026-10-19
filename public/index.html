@@ -248,7 +248,7 @@
                   <div class="wa-contact-name">
                     Aziry Sales Agent <i class="fas fa-check-circle"></i>
                   </div>
-                  <div class="wa-contact-status">online • typically replies instantly</div>
+                  <div class="wa-contact-status" id="waHeaderStatus">online • tap quick questions below</div>
                 </div>
                 <div class="wa-actions">
                   <i class="fas fa-video"></i>
@@ -258,42 +258,36 @@
               </div>
 
               <!-- Chat messages container -->
-              <div class="wa-chat-body">
+              <div class="wa-chat-body" id="waChatBody">
                 <div class="chat-date-pill">Today</div>
 
                 <div class="wa-bubble customer">
-                  Habari! Nahitaji kujua bei ya bidhaa na jinsi WhatsApp AI inavyoweza kusaidia biashara yangu ya nguo?
+                  Habari! Nahitaji kujua jinsi WhatsApp AI Sales Agent inavyoweza kusaidia biashara yangu na bei yake?
                   <div class="wa-meta">09:41</div>
                 </div>
 
                 <div class="wa-bubble agent">
                   Habari ndugu! Karibu sana Aziry Tech 🚀<br><br>
-                  AI yetu inajibu wateja wako papo hapo masaa 24/7, inatuma picha na bei za nguo, na kuchukua oda kiotomatiki.<br><br>
-                  Gharama ni <strong>TZS 30,000 tu kwa mwezi</strong> na inajumuisha ulinzi kamili wa Anti-Ban!
+                  AI yetu inajibu wateja wako papo hapo masaa 24/7, inatuma picha na bei, na kufunga oda kiotomatiki.<br><br>
+                  Gharama ni <strong>TZS 30,000 tu kwa mwezi</strong> ikiwa na ulinzi kamili wa Anti-Ban!
                   <div class="wa-meta">09:41 <i class="fas fa-check-double"></i></div>
-                </div>
-
-                <div class="wa-bubble customer">
-                  Vizuri mno! Je mteja akitaka kulipia kwa M-Pesa inawezekana kumpa maelekezo?
-                  <div class="wa-meta">09:42</div>
-                </div>
-
-                <div class="wa-bubble agent">
-                  Bila shaka! AI inatuma Lipa Namba yako na kufuatilia uthibitisho wa malipo papo hapo. Ungependa nikuwekee oda yako sasa hivi?
-                  <div class="wa-meta">09:42 <i class="fas fa-check-double"></i></div>
-                </div>
-
-                <div class="typing-indicator-box">
-                  <span></span>
-                  <span></span>
-                  <span></span>
                 </div>
               </div>
 
-              <!-- WhatsApp Footer -->
+              <!-- Interactive Prompt Chips -->
+              <div class="wa-quick-replies" id="waQuickReplies">
+                <span class="wa-sim-chip" data-msg="Vipi kuhusu kuzuia WhatsApp isipigwe ban?">🛡️ Anti-Ban inafanyaje?</span>
+                <span class="wa-sim-chip" data-msg="Bei ya huduma ni kiasi gani?">💰 Bei ya mfumo?</span>
+                <span class="wa-sim-chip" data-msg="Mnaunganishaje na duka au bidhaa zangu?">📦 Kuunganisha duka?</span>
+                <span class="wa-sim-chip" data-msg="Nataka kuanza kutumia leo!">🚀 Nataka kuanza leo!</span>
+              </div>
+
+              <!-- Interactive Active WhatsApp Input -->
               <div class="wa-footer-bar">
-                <div class="wa-input-fake">Message Aziry Sales Agent...</div>
-                <div class="wa-send-fake"><i class="fas fa-paper-plane"></i></div>
+                <form id="waSimulatorForm" style="display: flex; width: 100%; align-items: center; gap: 0.5rem;">
+                  <input type="text" id="waSimInput" class="wa-input-active" placeholder="Uliza swali hapa live..." autocomplete="off">
+                  <button type="submit" class="wa-send-btn" title="Tuma"><i class="fas fa-paper-plane"></i></button>
+                </form>
               </div>
             </div>
 
@@ -308,6 +302,128 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ROI & TIME SAVED CALCULATOR
+       ======================================================== -->
+  <section id="calculator" class="roi-section">
+    <div class="section-header">
+      <span class="section-tag green">Kikokotoo cha Faida</span>
+      <h2 class="section-title">Hesabu Muda na Pesa Unazookoa</h2>
+      <p class="section-subtitle">
+        Tazama jinsi Azirytech WhatsApp AI Sales Agent inavyookoa masaa ya kazi na kuongeza mapato ya biashara yako kila mwezi.
+      </p>
+    </div>
+
+    <div class="roi-card">
+      <div class="roi-controls">
+        <h3>Wateja Wangapi Wanakutumia Ujumbe?</h3>
+        <p>Sogeza kitelezi hapa chini kulingana na wastani wa jumbe/wateja unaopokea kwa siku kwenye WhatsApp yako:</p>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <span>Idadi ya Wateja / Siku:</span>
+            <span class="slider-val-badge" id="sliderValDisplay">50 Wateja / Siku</span>
+          </div>
+          <input type="range" id="roiSlider" class="roi-range" min="10" max="300" step="10" value="50">
+        </div>
+        
+        <div style="font-size: 0.88rem; color: var(--text-muted);">
+          <i class="fas fa-check-circle" style="color: var(--whatsapp);"></i> Inajumuisha uokoaji wa muda wa usiku na wikendi bila kuajiri mfanyakazi wa ziada.
+        </div>
+      </div>
+
+      <div class="roi-results">
+        <div class="roi-stat-box">
+          <div class="roi-stat-num" id="statHoursSaved">75+</div>
+          <div class="roi-stat-label">Masaa Yanayookolewa / Mwezi</div>
+        </div>
+
+        <div class="roi-stat-box">
+          <div class="roi-stat-num" id="statResponseTime">&lt; 2s</div>
+          <div class="roi-stat-label">Muda wa Kujibu Wateja</div>
+        </div>
+
+        <div class="roi-stat-box">
+          <div class="roi-stat-num" id="statConversionBoost">+38%</div>
+          <div class="roi-stat-label">Wastani wa Ongezeko la Mauzo</div>
+        </div>
+
+        <div class="roi-stat-box" style="border-color: var(--whatsapp); background: #ffffff;">
+          <div class="roi-stat-num" style="color: var(--whatsapp-dark);" id="statEstimatedVal">TZS 450K+</div>
+          <div class="roi-stat-label">Thamani ya Thamani Inayozalishwa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CLIENT SOCIAL PROOF & TESTIMONIALS
+       ======================================================== -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-header">
+      <span class="section-tag">Ushuhuda wa Wateja</span>
+      <h2 class="section-title">Wafanyabiashara Wanasemaje Kuhusu Sisi</h2>
+      <p class="section-subtitle">
+        Tazama maoni ya wamiliki wa maduka na biashara zinazotumia mifumo na masuluhisho yetu ya kiteknolojia.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="quote-text">
+          "Nilikuwa napoteza wateja wengi sana wanaotuma meseji usiku kuanzia saa nne usiku hadi asubuhi. Tangu niweke Aziry AI Sales Agent kwenye WhatsApp ya duka letu, inajibu, inatuma picha na kufunga oda hata nikiwa nimelala!"
+        </p>
+        <div class="client-meta">
+          <div class="client-avatar">JM</div>
+          <div class="client-info">
+            <strong>Juma M.</strong>
+            <span>Duka la Mitindo & Nguo, Kariakoo</span>
+          </div>
+          <div class="verified-tag"><i class="fas fa-check-circle"></i> Verified</div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="quote-text">
+          "BandoChap imekuwa suluhisho kubwa kwa ajili ya ununuzi wa vifurushi vya mtandao. Malipo ya USSD Push ya M-Pesa na Tigo yanafanyika haraka mno bila usumbufu. Azizi ni developer mwenye weledi wa hali ya juu."
+        </p>
+        <div class="client-meta">
+          <div class="client-avatar" style="background: var(--whatsapp-light); color: var(--whatsapp-dark);">SK</div>
+          <div class="client-info">
+            <strong>Said K.</strong>
+            <span>Digital Entrepreneur, Arusha</span>
+          </div>
+          <div class="verified-tag"><i class="fas fa-check-circle"></i> Verified</div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="quote-text">
+          "Ujuzi wa Azizi kwenye Python na Django umewezesha mifumo yetu ya data na uchanganuzi wa fedha kufanya kazi bila kukwama hata mara moja. Kasi yake na ubora wa code ni kiwango cha kimataifa."
+        </p>
+        <div class="client-meta">
+          <div class="client-avatar" style="background: #fef3c7; color: #b45309;">EM</div>
+          <div class="client-info">
+            <strong>Emmanuel M.</strong>
+            <span>Logistics & Retail Manager, Mwanza</span>
+          </div>
+          <div class="verified-tag"><i class="fas fa-check-circle"></i> Verified</div>
+        </div>
+      </div>
+
     </div>
   </section>
 

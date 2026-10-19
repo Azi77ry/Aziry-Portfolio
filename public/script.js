@@ -301,4 +301,145 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ========================================================
+  // 8. INTERACTIVE WHATSAPP IN-BROWSER SIMULATOR
+  // ========================================================
+  const waChatBody = document.getElementById('waChatBody');
+  const waSimChips = document.querySelectorAll('.wa-sim-chip');
+  const waSimForm = document.getElementById('waSimulatorForm');
+  const waSimInput = document.getElementById('waSimInput');
+  const waHeaderStatus = document.getElementById('waHeaderStatus');
+
+  const waReplies = {
+    "ban": "Usiwe na wasiwasi kabisa! Mfumo wetu una <strong>Anti-Ban Engine</strong> inayotumia ucheleweshaji wa kawaida wa uandishi wa kibinadamu (human typing delay 2s-5s), intervals za kubadilika, na ulinzi wa sessions ili namba yako iwe salama 100%.",
+    "bei": "Bei ya kuanza ni <strong>TZS 30,000 tu kwa mwezi</strong>! Inajumuisha uunganishaji wa bidhaa zako zote, mafunzo ya mfumo, na huduma ya kiufundi masaa 24/7.",
+    "duka": "Ndiyo kabisa! Tunaunganisha orodha yako ya bidhaa, picha, bei, na maelekezo ya malipo (Lipa Namba ya M-Pesa/Tigo Pesa). Mteja akiuliza kuhusu bidhaa yoyote, AI inamtumia picha na bei papo hapo!",
+    "anza": "Safi sana! Kuanza ni rahisi sana: Bofya kitufe cha chini cha <strong>'Jaribu Live Demo Sasa'</strong> au tutumie ujumbe WhatsApp kwa +255 692 350 076 tukuanzishie mara moja!",
+    "mambo": "Poa sana! Karibu Aziry Tech. Ninaweza kukusaidia kufunga oda na kujibu wateja wako wote masaa 24.",
+    "habari": "Habari nzuri! Karibu sana Aziry Tech 🚀 Nipo tayari kukuonyesha jinsi tunavyoongeza mauzo kwenye WhatsApp yako.",
+    "default": "Swali zuri sana! Aziry WhatsApp AI inafanya kazi masaa 24 kujibu wateja, kutoa bei, na kuchukua oda kiotomatiki bila kukatika. Unaweza kubofya kitufe cha 'Jaribu Live Demo' kuanza sasa!"
+  };
+
+  function getWaSimReply(text) {
+    const t = text.toLowerCase();
+    if (t.includes('ban')) return waReplies.ban;
+    if (t.includes('bei') || t.includes('gharama') || t.includes('cost') || t.includes('price')) return waReplies.bei;
+    if (t.includes('duka') || t.includes('bidhaa') || t.includes('unganisha')) return waReplies.duka;
+    if (t.includes('anza') || t.includes('leo') || t.includes('join')) return waReplies.anza;
+    if (t.includes('mambo')) return waReplies.mambo;
+    if (t.includes('habari')) return waReplies.habari;
+    return waReplies.default;
+  }
+
+  function getCurrentTime() {
+    const now = new Date();
+    const hrs = String(now.getHours()).padStart(2, '0');
+    const mins = String(now.getMinutes()).padStart(2, '0');
+    return hrs + ':' + mins;
+  }
+
+  function sendWaSimMessage(customerText) {
+    if (!waChatBody || !customerText.trim()) return;
+
+    // 1. Append customer message
+    const custBubble = document.createElement('div');
+    custBubble.className = 'wa-bubble customer';
+    custBubble.innerHTML = customerText + '<div class="wa-meta">' + getCurrentTime() + '</div>';
+    waChatBody.appendChild(custBubble);
+    waChatBody.scrollTop = waChatBody.scrollHeight;
+
+    // 2. Show typing indicator & change status
+    if (waHeaderStatus) waHeaderStatus.textContent = 'typing...';
+    
+    const typingBox = document.createElement('div');
+    typingBox.className = 'typing-indicator-box';
+    typingBox.id = 'waActiveTyping';
+    typingBox.innerHTML = '<span></span><span></span><span></span>';
+    waChatBody.appendChild(typingBox);
+    waChatBody.scrollTop = waChatBody.scrollHeight;
+
+    // 3. Realistic delayed reply
+    setTimeout(() => {
+      const activeTyping = document.getElementById('waActiveTyping');
+      if (activeTyping) activeTyping.remove();
+
+      const replyHtml = getWaSimReply(customerText);
+      const agentBubble = document.createElement('div');
+      agentBubble.className = 'wa-bubble agent';
+      agentBubble.innerHTML = replyHtml + '<div class="wa-meta">' + getCurrentTime() + ' <i class="fas fa-check-double"></i></div>';
+      
+      waChatBody.appendChild(agentBubble);
+      waChatBody.scrollTop = waChatBody.scrollHeight;
+
+      if (waHeaderStatus) waHeaderStatus.textContent = 'online • typically replies instantly';
+    }, 750);
+  }
+
+  waSimChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const msg = chip.getAttribute('data-msg') || chip.textContent;
+      sendWaSimMessage(msg);
+    });
+  });
+
+  if (waSimForm && waSimInput) {
+    waSimForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = waSimInput.value.trim();
+      if (!val) return;
+      sendWaSimMessage(val);
+      waSimInput.value = '';
+    });
+  }
+
+  // ========================================================
+  // 9. INTERACTIVE ROI & TIME SAVED CALCULATOR
+  // ========================================================
+  const roiSlider = document.getElementById('roiSlider');
+  const sliderValDisplay = document.getElementById('sliderValDisplay');
+  const statHoursSaved = document.getElementById('statHoursSaved');
+  const statConversionBoost = document.getElementById('statConversionBoost');
+  const statEstimatedVal = document.getElementById('statEstimatedVal');
+
+  if (roiSlider) {
+    roiSlider.addEventListener('input', () => {
+      const val = parseInt(roiSlider.value, 10);
+      if (sliderValDisplay) sliderValDisplay.textContent = val + ' Wateja / Siku';
+      
+      const hours = Math.round(val * 1.5);
+      const boost = Math.min(65, 25 + Math.round(val * 0.12));
+      const money = val * 9000;
+
+      if (statHoursSaved) statHoursSaved.textContent = hours + '+ hrs';
+      if (statConversionBoost) statConversionBoost.textContent = '+' + boost + '%';
+      if (statEstimatedVal) statEstimatedVal.textContent = 'TZS ' + (money >= 1000000 ? (money / 1000000).toFixed(1) + 'M+' : Math.round(money / 1000) + 'K+');
+    });
+  }
+
+  // ========================================================
+  // 10. 3D TILT EFFECT ON PROJECT CARDS
+  // ========================================================
+  const cards = document.querySelectorAll('.project-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+      
+      card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-6px)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  });
+
 });

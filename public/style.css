@@ -2000,3 +2000,322 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+/* ========================================================
+   ENHANCEMENTS: INTERACTIVE WHATSAPP SIMULATOR & ROI
+   ======================================================== */
+
+.wa-quick-replies {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(240, 242, 245, 0.95);
+  border-top: 1px solid #e2e8f0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.wa-quick-replies::-webkit-scrollbar {
+  display: none;
+}
+
+.wa-sim-chip {
+  background: #ffffff;
+  border: 1px solid #10b981;
+  color: #047857;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.wa-sim-chip:hover {
+  background: #10b981;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.wa-footer-bar form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wa-input-active {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  color: #111b21;
+  outline: none;
+  font-family: inherit;
+}
+
+.wa-input-active:focus {
+  border-color: #008069;
+}
+
+.wa-send-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #008069;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.wa-send-btn:hover {
+  background: #059669;
+  transform: scale(1.05);
+}
+
+/* 3D Tilt Effect on Project Cards */
+.project-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ========================================================
+   ROI / TIME-SAVED CALCULATOR SECTION
+   ======================================================== */
+.roi-section {
+  background: #ffffff;
+  padding: 5rem 6%;
+}
+
+.roi-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f8fafc 0%, #ecfdf5 100%);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.roi-controls h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.roi-controls p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.slider-group {
+  margin-bottom: 1.5rem;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.slider-val-badge {
+  background: var(--whatsapp);
+  color: #ffffff;
+  padding: 0.25rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.roi-range {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #cbd5e1;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.roi-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  transition: var(--transition);
+}
+
+.roi-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.roi-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.roi-stat-box {
+  background: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.1rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.roi-stat-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--whatsapp);
+}
+
+.roi-stat-num {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--whatsapp-dark);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.roi-stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ========================================================
+   TESTIMONIALS SECTION
+   ======================================================== */
+.testimonials-section {
+  background: var(--bg-main);
+  padding: 5.5rem 6%;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  padding: 1.85rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-border);
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.quote-text {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  flex: 1;
+}
+
+.client-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+}
+
+.client-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: 2px solid var(--border-subtle);
+}
+
+.client-info strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.client-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.verified-tag {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--whatsapp-dark);
+  background: var(--whatsapp-light);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+@media (max-width: 900px) {
+  .roi-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
