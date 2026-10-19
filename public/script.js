@@ -72,12 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typedTarget && typeof Typed !== 'undefined') {
     new Typed('.typed-text', {
       strings: [
-        'Full-Stack Developer',
-        'AI & Machine Learning Specialist',
-        'WhatsApp Automation Engineer',
+        'Python & Django Developer',
+        'Full-Stack & Next.js Engineer',
+        'AI & WhatsApp Automation Specialist',
+        'Data Scientist & ML Researcher',
         'Founder of Aziry Tech'
       ],
-      typeSpeed: 55,
+      typeSpeed: 50,
       backSpeed: 30,
       backDelay: 1800,
       loop: true
@@ -159,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Default intelligent fallback
-    return "Asante kwa swali lako kuhusu <strong>" + query + "</strong>. Azizi Iddi ni mtaalamu wa kutengeneza mifumo ya AI, WhatsApp AI Sales Agents, na Web Applications. Unaweza kuwasiliana naye moja kwa moja kupitia WhatsApp (+255 692 350 076) kwa maelezo zaidi!";
+    return "Asante kwa swali lako kuhusu <strong>" + query + "</strong>. Azizi Iddi ni mtaalamu mbobezi wa Python, Django, mifumo ya AI, WhatsApp AI Sales Agents, na Web Applications. Unaweza kuwasiliana naye moja kwa moja kupitia WhatsApp (+255 692 350 076) kwa maelezo zaidi!";
   }
 
   function handleInPageAi() {
