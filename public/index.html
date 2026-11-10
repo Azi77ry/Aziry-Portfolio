@@ -9,7 +9,7 @@
   <meta name="author" content="Azizi Iddi Mohamed">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://www.azirytech.online/">
-  <meta name="theme-color" content="#0B0A24">
+  <meta name="theme-color" content="#7C3AED">
 
   <!-- Local SEO -->
   <meta name="geo.region" content="TZ-02">
@@ -44,7 +44,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="style.css">
 
   <!-- Structured data -->
@@ -227,29 +227,33 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <div class="glass profile spot">
-            <div class="profile-top">
-              <img src="img/icon-192.png" alt="" width="64" height="64">
-              <div>
-                <strong>Aziry Tech</strong>
-                <span>Founder &amp; lead engineer</span>
-              </div>
+          <div class="sphere s1"></div>
+          <div class="sphere s2"></div>
+          <div class="sphere s3"></div>
+          <div class="ring"></div>
+          <div class="scene"><div class="cube">
+            <span class="face front"></span><span class="face back"></span><span class="face right"></span>
+            <span class="face left"></span><span class="face top"></span><span class="face bottom"></span>
+          </div></div>
+
+          <div class="card chat-card">
+            <div class="chat-head">
+              <img src="img/icon-192.png" alt="" width="36" height="36">
+              <div><strong>Aziry Sales Agent</strong><span>online</span></div>
             </div>
-            <div class="code">
-              <span class="c-k">from</span> aziry <span class="c-k">import</span> SalesAgent<br>
-              agent = SalesAgent(lang=<span class="c-s">"sw"</span>)<br>
-              agent.reply(<span class="c-s">"Bei gani?"</span>)<br>
-              <span class="c-c"># → TZS 30,000 / mwezi ✓</span>
-            </div>
-            <div class="chips"><span>Python</span><span>Django</span><span>Next.js</span><span>LLMs</span><span>M-Pesa</span></div>
+            <p class="cb in">Habari! Bei gani?</p>
+            <p class="cb out">TZS 30,000 kwa mwezi. Nikutumie picha za bidhaa? ✓✓</p>
+            <p class="cb in">Ndiyo, tuma 🙏</p>
           </div>
-          <div class="glass float f1">
-            <span class="f-ico wa"><svg class="ico"><use href="#i-wa"/></svg></span>
+
+          <div class="card stat-card">
+            <span class="stat-ico"><svg class="ico"><use href="#i-wa"/></svg></span>
             <div><strong>New order</strong><span>Replied in 2s</span></div>
           </div>
-          <div class="glass float f2">
-            <span class="f-ico"><svg class="ico"><use href="#i-chat"/></svg></span>
-            <div><strong>Swahili + English</strong><span>Auto-detected</span></div>
+
+          <div class="card bars-card">
+            <strong>24/7</strong><span>always answering</span>
+            <div class="bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:100%"></i></div>
           </div>
         </div>
       </div>
@@ -334,6 +338,7 @@
         <h2 id="work-title">Selected work</h2>
         <p class="section-intro">Twelve products shipped for shops, fintech and industry in Tanzania. Three of them carry most of the weight.</p>
 
+        <div class="bento">
         <article class="feature glass spot" id="project-agent">
           <img src="img/whatsapp-ai-sales-agent.webp" alt="Aziry WhatsApp AI Sales Agent taking an order inside a WhatsApp chat" width="1200" height="1425" loading="lazy" decoding="async" class="tall">
           <div class="feature-text">
@@ -366,6 +371,8 @@
             <p class="links"><a href="https://github.com/Azi77ry" target="_blank" rel="noopener">Code on GitHub</a></p>
           </div>
         </article>
+
+        </div>
 
         <div class="more glass">
           <div class="more-head">
