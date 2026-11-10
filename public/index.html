@@ -2,1124 +2,564 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Primary Meta Tags -->
-  <title>Azizi Iddi Mohamed | Founder of Aziry Tech | Python, Django, Full-Stack & AI Specialist</title>
-  <meta name="title" content="Azizi Iddi Mohamed | Founder of Aziry Tech | Python, Django, Full-Stack & AI Specialist">
-  <meta name="description" content="Azizi Iddi Mohamed - Founder of Aziry Tech. Expert in Python, Django, Full-Stack Web Development, AI Automation, and Creator of the 24/7 WhatsApp AI Sales Agent from Dar es Salaam, Tanzania.">
-  <meta name="keywords" content="Azizi Iddi, Azizi Mohamed, Aziry, Aziry Tech, Python Developer Tanzania, Django Developer, WhatsApp AI Sales Agent, BandoChap, Alpha Earth Resources, Tanzanian Developer">
-  <meta name="robots" content="index, follow">
+  <title>Azizi Iddi Mohamed | Python &amp; AI Developer in Tanzania</title>
+  <meta name="description" content="Founder of Aziry Tech in Dar es Salaam. I build WhatsApp AI sales agents, Django backends and fintech platforms for Tanzanian businesses. Try the bot live.">
+  <meta name="author" content="Azizi Iddi Mohamed">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://www.azirytech.online/">
+  <meta name="theme-color" content="#17154F">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Local SEO -->
+  <meta name="geo.region" content="TZ-02">
+  <meta name="geo.placename" content="Dar es Salaam">
+  <meta name="geo.position" content="-6.7924;39.2083">
+  <meta name="ICBM" content="-6.7924, 39.2083">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aziry Tech">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="sw_TZ">
   <meta property="og:url" content="https://www.azirytech.online/">
-  <meta property="og:title" content="Azizi Iddi Mohamed | Founder of Aziry Tech | Python & AI Specialist">
-  <meta property="og:description" content="Explore cutting-edge projects by Azizi Iddi Mohamed: Python & Django architectures, flagship 24/7 WhatsApp AI Sales Agent, BandoChap fintech, and institutional platforms.">
-  <meta property="og:image" content="https://www.azirytech.online/Images/logoaziry.png">
+  <meta property="og:title" content="Azizi Iddi Mohamed | Python & AI Developer in Tanzania">
+  <meta property="og:description" content="WhatsApp AI sales agents, Django backends and fintech platforms for Tanzanian businesses. Try the WhatsApp bot live.">
+  <meta property="og:image" content="https://www.azirytech.online/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Azizi Iddi Mohamed, founder of Aziry Tech, Dar es Salaam">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.azirytech.online/">
-  <meta property="twitter:title" content="Azizi Iddi Mohamed | Founder of Aziry Tech">
-  <meta property="twitter:description" content="Python, Django, Full-Stack Developer, and Creator of the Azirytech WhatsApp AI Sales Agent.">
-  <meta property="twitter:image" content="https://www.azirytech.online/Images/logoaziry.png">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Azizi Iddi Mohamed | Python & AI Developer in Tanzania">
+  <meta name="twitter:description" content="WhatsApp AI sales agents, Django backends and fintech platforms for Tanzanian businesses.">
+  <meta name="twitter:image" content="https://www.azirytech.online/img/og-cover.png">
 
-  <!-- Favicon -->
-  <link rel="icon" href="Images/fav1.png" type="image/png">
-  <link rel="apple-touch-icon" href="Images/fav1.png">
+  <!-- Icons & manifest -->
+  <link rel="icon" href="img/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/icon-180.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Unbounded:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Azizi Iddi Mohamed",
-    "alternateName": ["Azizi Mohamed", "Azizi Iddi", "Aziry", "Aziry Tech"],
-    "url": "https://www.azirytech.online/",
-    "sameAs": [
-      "https://github.com/Azi77ry",
-      "https://www.linkedin.com/in/aziziiddi/",
-      "https://www.instagram.com/aziry55"
-    ],
-    "jobTitle": "Full Stack Developer, Python & Django Specialist",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Aziry Tech",
-      "url": "https://www.azirytech.online/"
-    },
-    "description": "Azizi Iddi Mohamed is the founder of Aziry Tech, specializing in Python, Django, AI automation, and cloud platforms."
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.azirytech.online/#website",
+        "url": "https://www.azirytech.online/",
+        "name": "Aziry Tech",
+        "inLanguage": ["en", "sw"],
+        "publisher": { "@id": "https://www.azirytech.online/#azizi" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.azirytech.online/#azizi",
+        "name": "Azizi Iddi Mohamed",
+        "alternateName": ["Azizi Iddi", "Azizi Mohamed", "Aziry"],
+        "url": "https://www.azirytech.online/",
+        "image": "https://www.azirytech.online/img/icon-512.png",
+        "jobTitle": "Founder & Software Engineer",
+        "description": "Python, Django and AI developer in Dar es Salaam, Tanzania. Founder of Aziry Tech and creator of the Aziry WhatsApp AI Sales Agent.",
+        "worksFor": { "@id": "https://www.azirytech.online/#business" },
+        "homeLocation": { "@type": "Place", "name": "Dar es Salaam, Tanzania" },
+        "knowsLanguage": ["sw", "en"],
+        "knowsAbout": ["Python", "Django", "Django REST Framework", "Next.js", "Node.js", "WhatsApp automation", "Large language models", "Mobile money integration", "Data science", "Pandas"],
+        "sameAs": [
+          "https://github.com/Azi77ry",
+          "https://www.linkedin.com/in/aziziiddi/",
+          "https://www.instagram.com/aziry55"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.azirytech.online/#business",
+        "name": "Aziry Tech",
+        "url": "https://www.azirytech.online/",
+        "logo": "https://www.azirytech.online/img/icon-512.png",
+        "image": "https://www.azirytech.online/img/og-cover.png",
+        "founder": { "@id": "https://www.azirytech.online/#azizi" },
+        "telephone": "+255692350076",
+        "email": "Aziziiddi555@gmail.com",
+        "priceRange": "TZS 30,000+",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dar es Salaam",
+          "addressCountry": "TZ"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -6.7924, "longitude": 39.2083 },
+        "areaServed": [{ "@type": "Country", "name": "Tanzania" }, { "@type": "Place", "name": "East Africa" }],
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:00", "closes": "20:00"
+        }],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Software services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WhatsApp AI sales agent setup" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Python & Django backend development" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web application development (Next.js, Node.js)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile money (USSD push) payment integration" } }
+          ]
+        },
+        "sameAs": ["https://github.com/Azi77ry", "https://www.instagram.com/aziry55"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.azirytech.online/#whatsapp-agent",
+        "name": "Aziry WhatsApp AI Sales Agent",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "WhatsApp",
+        "description": "An AI agent that answers customers on WhatsApp 24/7 in Swahili and English, shares product photos and prices, and takes orders.",
+        "image": "https://www.azirytech.online/img/whatsapp-ai-sales-agent.webp",
+        "author": { "@id": "https://www.azirytech.online/#azizi" },
+        "offers": {
+          "@type": "Offer",
+          "price": "30000",
+          "priceCurrency": "TZS",
+          "url": "https://www.azirytech.online/#sales-agent",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Projects by Azizi Iddi Mohamed",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "WhatsApp AI Sales Agent", "url": "https://www.azirytech.online/#project-agent" },
+          { "@type": "ListItem", "position": 2, "name": "BandoChap internet bundle platform", "url": "https://www.azirytech.online/#project-bandochap" },
+          { "@type": "ListItem", "position": 3, "name": "Alpha Earth Resources corporate portal", "url": "https://www.azirytech.online/#project-alpha" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How much does the WhatsApp AI Sales Agent cost?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Plans start at TZS 30,000 per month. That includes loading your products and prices, setup and technical support." } },
+          { "@type": "Question", "name": "Will my WhatsApp number get banned?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The agent replies at a human pace with typing delays, keeps daily sending limits and honours customers who opt out. These are the habits WhatsApp expects from a normal business account. No tool can promise zero risk, but these lower it a lot." } },
+          { "@type": "Question", "name": "Does the agent speak Swahili?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. It answers in Swahili or English, depending on the language your customer writes in." } },
+          { "@type": "Question", "name": "Can Azizi build a custom system for my business?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Aziry Tech builds Python and Django backends, Next.js and Node.js web apps, and M-Pesa, Airtel Money and HaloPesa payment integrations for businesses in Tanzania and East Africa." } },
+          { "@type": "Question", "name": "How long does setup take?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A WhatsApp agent is usually live within one to three days after you send your product list. Custom web projects are scoped and quoted individually." } }
+        ]
+      }
+    ]
   }
   </script>
-
-  <!-- Google Fonts & Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Background subtle particles canvas -->
-  <div id="particles-js"></div>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  </svg>
 
-  <!-- Header -->
-  <header>
-    <a href="#home" class="logo-container">
-      <img src="Images/logoaziry.png" alt="Aziry Tech Logo" class="logo-img" onerror="this.src='Images/fav1.png'">
-      <span class="logo-text">Aziry<span>Tech</span></span>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head" id="top">
+    <a href="#top" class="brand" aria-label="Aziry Tech home">
+      <img src="img/icon-192.png" alt="" width="34" height="34">
+      <span>Aziry Tech</span>
     </a>
-
-    <ul class="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#sales-agent" style="color: var(--whatsapp-dark); font-weight: 700;"><i class="fab fa-whatsapp"></i> WhatsApp AI</a></li>
-      <li><a href="#about">About & Skills</a></li>
-      <li><a href="#projects">All Projects</a></li>
-      <li><a href="#ai">AI Assistant</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-cta">
-      <a href="https://wa.me/255692350076?text=Habari%20Aziry%20Tech%2C%20nataka%20kujaribu%20WhatsApp%20AI%20Sales%20Agent" target="_blank" class="btn-nav-whatsapp">
-        <i class="fab fa-whatsapp"></i> Test Bot Live
-      </a>
-      <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
+    <nav aria-label="Main">
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <ul id="nav-list">
+        <li><a href="#sales-agent">WhatsApp agent</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/255692350076?text=Habari%20Aziry%20Tech%2C%20nataka%20kujaribu%20WhatsApp%20AI%20Sales%20Agent" target="_blank" rel="noopener">
+      <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
+    </a>
   </header>
 
-  <!-- ========================================================
-       HERO SECTION
-       ======================================================== -->
-  <section id="home" class="hero">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="status-dot"></span>
-          <span>Founder of Aziry Tech • Available for Projects</span>
+  <main id="main">
+
+    <!-- HERO: built like a kanga — pindo (border), mji (centre), ujumbe (message) -->
+    <section class="kanga" aria-labelledby="hero-title">
+      <div class="pindo" aria-hidden="true"></div>
+      <div class="mji">
+        <svg class="medallion" viewBox="0 0 400 400" aria-hidden="true">
+          <circle cx="200" cy="200" r="186" />
+          <circle cx="200" cy="200" r="150" />
+          <path d="M200 70 L318 300 H82 Z" />
+          <path d="M200 120 L276 270 H124 Z" />
+          <circle cx="200" cy="232" r="20" class="node" />
+        </svg>
+
+        <div class="mji-copy">
+          <p class="kicker">Founder of Aziry Tech, Dar es Salaam</p>
+          <h1 id="hero-title">
+            <span class="name">Azizi Iddi<br>Mohamed</span>
+            <span class="role">Python, Django &amp; AI developer building sales tools for Tanzanian business.</span>
+          </h1>
+          <p class="lede">
+            My WhatsApp AI agent answers your customers in Swahili and English, sends prices and photos, and takes orders while you sleep.
+            I also build Django backends, mobile money checkouts and company websites.
+          </p>
+          <div class="actions">
+            <a class="btn btn-wa" href="https://wa.me/255692350076?text=Habari%20Aziry%20Tech%2C%20nataka%20kujaribu%20WhatsApp%20AI%20Sales%20Agent" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Try the bot on WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#work">See my work</a>
+          </div>
+        </div>
+        <p class="ujumbe" lang="sw">Mteja hasubiri. Biashara yako ijibu saa ishirini na nne.</p>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP -->
+    <section id="sales-agent" class="agent" aria-labelledby="agent-title">
+      <div class="wrap agent-grid">
+        <div class="agent-copy">
+          <h2 id="agent-title">Aziry WhatsApp AI Sales Agent</h2>
+          <p class="big" lang="sw">
+            Geuza WhatsApp yako kuwa muuzaji anayefanya kazi saa 24. Anajibu maswali papo hapo, anatuma bei na picha, na anachukua oda — huku namba yako ikiwa salama.
+          </p>
+
+          <dl class="features">
+            <div><dt>Replies in about two seconds</dt><dd lang="sw">Anajibu wateja usiku, wikendi na sikukuu, bila kuchoka.</dd></div>
+            <div><dt>Keeps your number safe</dt><dd lang="sw">Anaandika kwa kasi ya binadamu na ana mipaka ya ujumbe kwa siku.</dd></div>
+            <div><dt>Knows your shop</dt><dd lang="sw">Tunampa orodha ya bidhaa, bei na sera zako, kwa Kiswahili na Kiingereza.</dd></div>
+            <div><dt>Shows you every order</dt><dd lang="sw">Dashibodi ya moja kwa moja ya mauzo na mazungumzo yote.</dd></div>
+          </dl>
+
+          <div class="price-row">
+            <p class="price"><span lang="sw">Kuanzia</span> <strong>TZS 30,000</strong> <span lang="sw">kwa mwezi</span></p>
+            <a class="btn btn-wa" href="https://wa.me/255692350076?text=Habari%20Aziry%20Tech%2C%20nataka%20kujaribu%20WhatsApp%20AI%20Sales%20Agent" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> <span lang="sw">Jaribu demo sasa</span>
+            </a>
+          </div>
         </div>
 
-        <h1>Hi, I'm <span>Azizi Iddi Mohamed</span></h1>
-        
-        <div class="typed-container">
-          <span class="typed-text"></span>
+        <!-- Live simulator -->
+        <div class="phone" aria-label="WhatsApp agent demo">
+          <div class="phone-head">
+            <img src="img/icon-192.png" alt="" width="36" height="36">
+            <div>
+              <strong>Aziry Sales Agent</strong>
+              <span id="waHeaderStatus">online</span>
+            </div>
+          </div>
+          <div class="phone-body" id="waChatBody" aria-live="polite">
+            <div class="bubble in" lang="sw">Habari! Nataka kujua bei ya mfumo wenu na unavyosaidia biashara yangu.<time>09:41</time></div>
+            <div class="bubble out" lang="sw">Karibu Aziry Tech! AI yetu inajibu wateja wako saa 24, inatuma picha na bei, na inachukua oda yenyewe. Bei ni <strong>TZS 30,000 kwa mwezi</strong>.<time>09:41</time></div>
+          </div>
+          <div class="phone-chips" lang="sw">
+            <button type="button" class="wa-chip" data-msg="Vipi kuhusu kuzuia WhatsApp isipigwe ban?">Namba itakuwa salama?</button>
+            <button type="button" class="wa-chip" data-msg="Mnaunganishaje na duka au bidhaa zangu?">Kuunganisha duka</button>
+            <button type="button" class="wa-chip" data-msg="Nataka kuanza kutumia leo!">Nataka kuanza leo</button>
+          </div>
+          <form class="phone-input" id="waSimulatorForm">
+            <label for="waSimInput" class="sr">Andika ujumbe</label>
+            <input id="waSimInput" type="text" placeholder="Uliza swali..." autocomplete="off" lang="sw">
+            <button type="submit" aria-label="Send"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Estimator -->
+      <div class="wrap estimator" aria-labelledby="est-title">
+        <div>
+          <h3 id="est-title" lang="sw">Unaokoa muda kiasi gani?</h3>
+          <label for="roiSlider" lang="sw">Wateja wanaokutumia ujumbe kwa siku: <output id="sliderValDisplay" for="roiSlider">50</output></label>
+          <input type="range" id="roiSlider" min="10" max="300" step="10" value="50">
+          <p class="note" lang="sw">Makadirio tu, kwa kudhani dakika 3 kwa kila mteja kwa siku 30.</p>
+        </div>
+        <dl class="est-out">
+          <div><dt lang="sw">Saa unazookoa kwa mwezi</dt><dd id="statHoursSaved">75</dd></div>
+          <div><dt lang="sw">Muda wa kujibu</dt><dd>&lt; 2s</dd></div>
+          <div><dt lang="sw">Mazungumzo kwa mwezi</dt><dd id="statChats">1,500</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 id="work-title">Selected work</h2>
+        <p class="section-intro">Twelve products shipped for shops, fintech and industry in Tanzania. Three of them carry most of the weight.</p>
+
+        <article class="feature" id="project-agent">
+          <img src="img/whatsapp-ai-sales-agent.webp" alt="Aziry WhatsApp AI Sales Agent taking an order inside a WhatsApp chat" width="1200" height="1425" loading="lazy" decoding="async" class="tall">
+          <div class="feature-text">
+            <h3>WhatsApp AI Sales Agent</h3>
+            <p>A 24/7 sales assistant on WhatsApp. It qualifies new enquiries, sends the product catalogue, accepts orders and follows up, with human-paced typing so the number stays safe. Merchants watch everything from a live dashboard.</p>
+            <ul class="tags"><li>Node.js</li><li>WhatsApp Web API</li><li>LLMs</li><li>SQLite</li></ul>
+            <p class="links">
+              <a href="https://wa.me/255692350076?text=Habari%20nataka%20kutest%20AI%20Sales%20Agent" target="_blank" rel="noopener">Test the agent</a>
+              <a href="#sales-agent">How it works</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="feature flip" id="project-bandochap">
+          <img src="img/bandochap.webp" alt="BandoChap website for buying Vodacom, Airtel, Yas and Halotel data bundles" width="1200" height="670" loading="lazy" decoding="async">
+          <div class="feature-text">
+            <h3>BandoChap</h3>
+            <p>Buy Vodacom, Airtel, Yas and Halotel data bundles in a few taps. Customers pay by USSD push on M-Pesa, Airtel Money or HaloPesa, payments are confirmed by webhook, and BandoBot suggests a bundle that fits the budget.</p>
+            <ul class="tags"><li>PHP</li><li>JavaScript</li><li>MobiLipa USSD push</li><li>Telco APIs</li></ul>
+            <p class="links"><a href="https://github.com/Azi77ry" target="_blank" rel="noopener">Code on GitHub</a></p>
+          </div>
+        </article>
+
+        <article class="feature" id="project-alpha">
+          <img src="img/alpha-earth-resources.webp" alt="Alpha Earth Resources Limited corporate website for Tanzania's mining sector" width="1200" height="670" loading="lazy" decoding="async">
+          <div class="feature-text">
+            <h3>Alpha Earth Resources Limited</h3>
+            <p>The corporate platform for a Tanzanian mining and mineral rights company, connecting investors, regulators and licence holders with exploration updates and compliance documents.</p>
+            <ul class="tags"><li>Next.js 14</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
+            <p class="links"><a href="https://github.com/Azi77ry" target="_blank" rel="noopener">Code on GitHub</a></p>
+          </div>
+        </article>
+
+        <div class="more">
+          <div class="more-head">
+            <h3>More projects</h3>
+            <div class="filters" role="group" aria-label="Filter projects">
+              <button type="button" class="filter is-on" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="filter" data-filter="ai" aria-pressed="false">AI &amp; WhatsApp</button>
+              <button type="button" class="filter" data-filter="web" aria-pressed="false">Web &amp; fintech</button>
+              <button type="button" class="filter" data-filter="data" aria-pressed="false">Python &amp; data</button>
+            </div>
+          </div>
+
+          <ul class="index">
+            <li data-category="ai">
+              <img src="img/ai-recruitment-assistant.webp" alt="" width="96" height="77" loading="lazy" decoding="async">
+              <div><h4>AI WhatsApp Recruitment Assistant</h4><p>Screens candidates, answers company FAQs and books interviews over WhatsApp.</p></div>
+              <span class="stack">Node.js, SQLite</span>
+              <a href="https://wa.me/255692350076?text=Habari%20nataka%20kujaribu%20Recruitment%20Bot" target="_blank" rel="noopener" aria-label="Test the recruitment assistant on WhatsApp">Test</a>
+            </li>
+            <li data-category="data">
+              <img src="img/sales-analytics.webp" alt="" width="96" height="53" loading="lazy" decoding="async">
+              <div><h4>Sales Analytics &amp; BI Dashboard</h4><p>Python and Pandas pipeline that finds trends and high-margin products in transaction records.</p></div>
+              <span class="stack">Python, Pandas, Matplotlib</span>
+              <a href="https://github.com/Azi77ry" target="_blank" rel="noopener" aria-label="Sales analytics code on GitHub">Code</a>
+            </li>
+            <li data-category="data ai">
+              <img src="img/krevant-sports.webp" alt="" width="96" height="64" loading="lazy" decoding="async">
+              <div><h4>Krevant Sports Intelligence</h4><p>Compares odds and past performance to produce statistical match insights.</p></div>
+              <span class="stack">Python, ML</span>
+              <a href="https://github.com/Azi77ry" target="_blank" rel="noopener" aria-label="Krevant code on GitHub">Code</a>
+            </li>
+            <li data-category="ai">
+              <img src="img/ai-chatbot.webp" alt="" width="96" height="126" loading="lazy" decoding="async">
+              <div><h4>Enterprise AI Chatbot</h4><p>Answers customer questions, recommends products and hands hard cases to a person.</p></div>
+              <span class="stack">Express, NLP</span>
+              <a href="https://github.com/Azi77ry" target="_blank" rel="noopener" aria-label="AI chatbot code on GitHub">Code</a>
+            </li>
+            <li data-category="ai">
+              <img src="img/ai-chatbot.webp" alt="" width="96" height="126" loading="lazy" decoding="async">
+              <div><h4>WhatsApp Multi-Utility Bot</h4><p>Auto-replies, group moderation, status reactions and deleted-message recovery.</p></div>
+              <span class="stack">Baileys, Node.js</span>
+              <a href="https://wa.me/255692350076?text=Habari%20nataka%20kujaribu%20WhatsApp%20Utility%20Bot" target="_blank" rel="noopener" aria-label="Test the utility bot on WhatsApp">Test</a>
+            </li>
+            <li data-category="web data">
+              <img src="img/bodaboda-income.webp" alt="" width="96" height="58" loading="lazy" decoding="async">
+              <div><h4>Bodaboda Income Manager</h4><p>A daily ledger for motorbike and bajaj riders: trips, fuel, loan payments and profit.</p></div>
+              <span class="stack">JavaScript, mobile web</span>
+              <a href="https://github.com/Azi77ry" target="_blank" rel="noopener" aria-label="Bodaboda manager code on GitHub">Code</a>
+            </li>
+            <li data-category="web">
+              <img src="img/pesa-trucker.webp" alt="" width="96" height="45" loading="lazy" decoding="async">
+              <div><h4>Pesa Trucker</h4><p>Simple cash-flow tracking for shops and logistics managers, without accounting software.</p></div>
+              <span class="stack">JavaScript</span>
+              <a href="https://github.com/Azi77ry" target="_blank" rel="noopener" aria-label="Pesa Trucker code on GitHub">Code</a>
+            </li>
+            <li data-category="web data">
+              <img src="img/money-task-manager.webp" alt="" width="96" height="72" loading="lazy" decoding="async">
+              <div><h4>Money &amp; Task Manager</h4><p>Track spending, savings goals and daily tasks with clear charts.</p></div>
+              <span class="stack">JavaScript, charts</span>
+              <a href="https://github.com/Azi77ry" target="_blank" rel="noopener" aria-label="Money manager code on GitHub">Code</a>
+            </li>
+            <li data-category="web">
+              <img src="img/family-attendance.webp" alt="" width="96" height="95" loading="lazy" decoding="async">
+              <div><h4>Family Attendance &amp; Events</h4><p>Guest check-in, headcounts, contributions and reminders for large gatherings.</p></div>
+              <span class="stack">Full-stack</span>
+              <a href="https://github.com/Azi77ry" target="_blank" rel="noopener" aria-label="Family attendance code on GitHub">Code</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICES -->
+    <section class="voices" aria-labelledby="voices-title">
+      <div class="wrap">
+        <h2 id="voices-title">What clients say</h2>
+        <div class="quotes">
+          <figure>
+            <blockquote lang="sw">“Nilikuwa napoteza wateja wengi sana wanaotuma meseji usiku kuanzia saa nne usiku hadi asubuhi. Tangu niweke Aziry AI Sales Agent kwenye WhatsApp ya duka letu, inajibu, inatuma picha na kufunga oda hata nikiwa nimelala!”</blockquote>
+            <figcaption><strong>Juma M.</strong> Fashion shop, Kariakoo</figcaption>
+          </figure>
+          <figure>
+            <blockquote lang="sw">“BandoChap imekuwa suluhisho kubwa kwa ajili ya ununuzi wa vifurushi vya mtandao. Malipo ya USSD Push ya M-Pesa na Tigo yanafanyika haraka mno bila usumbufu. Azizi ni developer mwenye weledi wa hali ya juu.”</blockquote>
+            <figcaption><strong>Said K.</strong> Digital entrepreneur, Arusha</figcaption>
+          </figure>
+          <figure>
+            <blockquote lang="sw">“Ujuzi wa Azizi kwenye Python na Django umewezesha mifumo yetu ya data na uchanganuzi wa fedha kufanya kazi bila kukwama hata mara moja. Kasi yake na ubora wa code ni kiwango cha kimataifa.”</blockquote>
+            <figcaption><strong>Emmanuel M.</strong> Logistics &amp; retail, Mwanza</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-text">
+          <h2 id="about-title">About Azizi</h2>
+          <p>I'm Azizi Iddi Mohamed, a software engineer and data science student in Dar es Salaam, and the founder of Aziry Tech.</p>
+          <p>I like problems that cost a business real money: customers who message at midnight and never hear back, payments that need a phone call to confirm, numbers that live in a notebook. My answer is usually a small, dependable system — a Django API, a WhatsApp agent, a USSD checkout — that does one job every day without fuss.</p>
+          <dl class="facts">
+            <div><dt>Projects shipped</dt><dd>12</dd></div>
+            <div><dt>Clients served</dt><dd>20+</dd></div>
+            <div><dt>Years building</dt><dd>2+</dd></div>
+          </dl>
         </div>
 
-        <p class="hero-description">
-          A dedicated software engineer, AI researcher, and entrepreneur based in Dar es Salaam, Tanzania. 
-          I build high-performance <strong>Python & Django</strong> systems, scalable <strong>Next.js & Node.js</strong> applications, 
-          and intelligent automation workflows including our flagship <strong>24/7 WhatsApp AI Sales Agent</strong> and <strong>BandoChap Fintech</strong>.
-        </p>
+        <div class="skills">
+          <div>
+            <h3>Python &amp; data</h3>
+            <ul><li>Python 3 (async, automation)</li><li>Django &amp; Django REST Framework</li><li>Pandas, NumPy, scikit-learn</li><li>PostgreSQL &amp; SQLite</li></ul>
+          </div>
+          <div>
+            <h3>AI &amp; WhatsApp</h3>
+            <ul><li>WhatsApp Web API &amp; Baileys</li><li>OpenAI, Gemini &amp; DeepSeek LLMs</li><li>Human-paced messaging</li><li>Swahili &amp; English bots</li></ul>
+          </div>
+          <div>
+            <h3>Web</h3>
+            <ul><li>Next.js 14, React, TypeScript</li><li>Node.js &amp; Express</li><li>Tailwind CSS</li><li>Responsive UI</li></ul>
+          </div>
+          <div>
+            <h3>Payments &amp; ops</h3>
+            <ul><li>M-Pesa, Airtel Money, HaloPesa</li><li>USSD push (MobiLipa)</li><li>Webhooks</li><li>Linux VPS &amp; Git</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="hero-actions">
-          <a href="#sales-agent" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> WhatsApp AI Sales Agent
+    <!-- FAQ -->
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <div class="wrap narrow">
+        <h2 id="faq-title">Questions people ask</h2>
+        <details>
+          <summary>How much does the WhatsApp AI Sales Agent cost?</summary>
+          <p>Plans start at TZS 30,000 per month. That includes loading your products and prices, setup and technical support.</p>
+          <p lang="sw">Bei inaanzia TZS 30,000 kwa mwezi, pamoja na kuweka bidhaa zako, usanidi na msaada wa kiufundi.</p>
+        </details>
+        <details>
+          <summary>Will my WhatsApp number get banned?</summary>
+          <p>The agent replies at a human pace with typing delays, keeps daily sending limits and honours customers who opt out. These are the habits WhatsApp expects from a normal business account. No tool can promise zero risk, but these lower it a lot.</p>
+        </details>
+        <details>
+          <summary>Does the agent speak Swahili?</summary>
+          <p>Yes. It answers in Swahili or English, depending on the language your customer writes in.</p>
+        </details>
+        <details>
+          <summary>Can you build a custom system for my business?</summary>
+          <p>Yes. I build Python and Django backends, Next.js and Node.js web apps, and M-Pesa, Airtel Money and HaloPesa payment integrations for businesses in Tanzania and East Africa.</p>
+        </details>
+        <details>
+          <summary>How long does setup take?</summary>
+          <p>A WhatsApp agent is usually live within one to three days after you send your product list. Custom web projects are scoped and quoted individually.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contact-title">Let's talk about your business</h2>
+          <p>WhatsApp is fastest. I usually reply the same day, Monday to Saturday.</p>
+          <a class="wa-line" href="https://wa.me/255692350076?text=Habari%20Azizi%2C%20nahitaji%20huduma%20za%20Aziry%20Tech" target="_blank" rel="noopener">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> +255 692 350 076
           </a>
-          <a href="#projects" class="btn btn-outline">
-            <i class="fas fa-layer-group"></i> View All 12 Projects
-          </a>
+          <ul class="contact-list">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> <a href="mailto:Aziziiddi555@gmail.com">Aziziiddi555@gmail.com</a></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Dar es Salaam, Tanzania</li>
+          </ul>
+          <ul class="social">
+            <li><a href="https://github.com/Azi77ry" target="_blank" rel="noopener me" aria-label="GitHub"><svg class="ico" aria-hidden="true"><use href="#i-gh"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/aziziiddi/" target="_blank" rel="noopener me" aria-label="LinkedIn"><svg class="ico" aria-hidden="true"><use href="#i-in"/></svg></a></li>
+            <li><a href="https://www.instagram.com/aziry55" target="_blank" rel="noopener me" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+          </ul>
         </div>
 
-        <div class="hero-social">
-          <span class="hero-social-label">Connect:</span>
-          <a href="https://github.com/Azi77ry" target="_blank" class="social-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/aziziiddi/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/255692350076" target="_blank" class="social-icon-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/aziry55" target="_blank" class="social-icon-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-card-img-wrap">
-            <img src="Images/fav1.png" alt="Azizi Iddi" onerror="this.src='Images/512.png'">
-            <div class="hero-card-tag">
-              <i class="fas fa-shield-alt"></i> Verified Tech Innovator
-            </div>
-          </div>
-
-          <div class="hero-card-content">
-            <h3>Azizi Iddi Mohamed</h3>
-            <p>Founder & Lead Architect at Aziry Tech</p>
-            <div class="hero-pills">
-              <span class="hero-pill" style="color: #b45309; background: #fef3c7; border-color: rgba(245, 158, 11, 0.3); font-weight: 700;"><i class="fab fa-python"></i> Python 3</span>
-              <span class="hero-pill" style="color: #047857; background: #ecfdf5; border-color: rgba(16, 185, 129, 0.3); font-weight: 700;"><i class="fas fa-cubes"></i> Django / DRF</span>
-              <span class="hero-pill">Node.js</span>
-              <span class="hero-pill">Next.js 14</span>
-              <span class="hero-pill">WhatsApp API</span>
-              <span class="hero-pill">Machine Learning</span>
-              <span class="hero-pill">Fintech / USSD</span>
-            </div>
-          </div>
-
-          <!-- Floating stat badge -->
-          <div class="floating-stat-badge">
-            <div class="stat-icon">
-              <i class="fas fa-robot"></i>
-            </div>
-            <div class="stat-meta">
-              <strong>99.4%</strong>
-              <span>AI Automation Rate</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================
-       FLAGSHIP SHOWCASE: WHATSAPP AI SALES AGENT (HIGH VISIBILITY)
-       ======================================================== -->
-  <section id="sales-agent" class="flagship-section">
-    <div class="flagship-wrapper">
-      
-      <div style="text-align: center;">
-        <div class="flagship-banner-badge">
-          <span class="pulse-green"></span>
-          <strong>Flagship SaaS Product • Live Production</strong>
-        </div>
-      </div>
-
-      <div class="flagship-hero-grid">
-        <div class="flagship-copy">
-          <h2>Azirytech <span>WhatsApp AI</span> Sales Agent</h2>
-          <p class="flagship-tagline">
-            Geuza WhatsApp yako kuwa mashine ya mauzo na huduma kwa wateja inayofanya kazi masaa 24/7. 
-            Inajibu maswali papo hapo, inachukua oda, na kufunga mauzo bila kukatika — huku namba yako 
-            ikiwa salama kwa teknolojia yetu ya Anti-Ban.
-          </p>
-
-          <div class="flagship-features">
-            <div class="ff-item">
-              <div class="ff-icon"><i class="fas fa-bolt"></i></div>
-              <h4>24/7 Autopilot Closing</h4>
-              <p>Inajibu wateja ndani ya sekunde 2, inatoa maelezo ya bidhaa na kuchukua oda bila kuchelewa.</p>
-            </div>
-
-            <div class="ff-item">
-              <div class="ff-icon"><i class="fas fa-user-shield"></i></div>
-              <h4>Anti-Ban Protection Engine</h4>
-              <p>Mwigizo wa uandishi wa kibinadamu (human typing delay & variable pacing) unaozuia account isipigwe ban.</p>
-            </div>
-
-            <div class="ff-item">
-              <div class="ff-icon"><i class="fas fa-brain"></i></div>
-              <h4>Custom Knowledge Base</h4>
-              <p>Inafunzwa orodha kamili ya bidhaa, bei, na sera zako kwa Kiswahili fasaha na Kiingereza.</p>
-            </div>
-
-            <div class="ff-item">
-              <div class="ff-icon"><i class="fas fa-chart-line"></i></div>
-              <h4>Merchant Dashboard</h4>
-              <p>Dashibodi ya moja kwa moja ya kufuatilia mauzo, mazungumzo ya wateja, na takwimu muhimu.</p>
-            </div>
-          </div>
-
-          <div class="flagship-footer-bar">
-            <div class="pricing-preview">
-              <span>Gharama ya Kuanzia</span>
-              <strong>TZS 30,000 <small>/ mwezi</small></strong>
-            </div>
-
-            <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
-              <a href="https://wa.me/255692350076?text=Habari%20Aziry%20Tech%2C%20nataka%20kujaribu%20WhatsApp%20AI%20Sales%20Agent" target="_blank" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Jaribu Live Demo Sasa
-              </a>
-              <a href="#contact" class="btn btn-outline">
-                <i class="fas fa-envelope"></i> Wasiliana Nasi
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Realistic WhatsApp Phone Mockup -->
-        <div class="mockup-wrapper">
-          <div class="phone-shell">
-            <div class="phone-top-notch"></div>
-            
-            <div class="phone-screen">
-              <!-- WhatsApp Header -->
-              <div class="wa-header">
-                <div class="wa-back"><i class="fas fa-arrow-left"></i></div>
-                <img src="Images/logoaziry.png" alt="Aziry AI" class="wa-avatar" onerror="this.src='Images/fav1.png'">
-                <div class="wa-contact-info">
-                  <div class="wa-contact-name">
-                    Aziry Sales Agent <i class="fas fa-check-circle"></i>
-                  </div>
-                  <div class="wa-contact-status" id="waHeaderStatus">online • tap quick questions below</div>
-                </div>
-                <div class="wa-actions">
-                  <i class="fas fa-video"></i>
-                  <i class="fas fa-phone"></i>
-                  <i class="fas fa-ellipsis-v"></i>
-                </div>
-              </div>
-
-              <!-- Chat messages container -->
-              <div class="wa-chat-body" id="waChatBody">
-                <div class="chat-date-pill">Today</div>
-
-                <div class="wa-bubble customer">
-                  Habari! Nahitaji kujua jinsi WhatsApp AI Sales Agent inavyoweza kusaidia biashara yangu na bei yake?
-                  <div class="wa-meta">09:41</div>
-                </div>
-
-                <div class="wa-bubble agent">
-                  Habari ndugu! Karibu sana Aziry Tech 🚀<br><br>
-                  AI yetu inajibu wateja wako papo hapo masaa 24/7, inatuma picha na bei, na kufunga oda kiotomatiki.<br><br>
-                  Gharama ni <strong>TZS 30,000 tu kwa mwezi</strong> ikiwa na ulinzi kamili wa Anti-Ban!
-                  <div class="wa-meta">09:41 <i class="fas fa-check-double"></i></div>
-                </div>
-              </div>
-
-              <!-- Interactive Prompt Chips -->
-              <div class="wa-quick-replies" id="waQuickReplies">
-                <span class="wa-sim-chip" data-msg="Vipi kuhusu kuzuia WhatsApp isipigwe ban?">🛡️ Anti-Ban inafanyaje?</span>
-                <span class="wa-sim-chip" data-msg="Bei ya huduma ni kiasi gani?">💰 Bei ya mfumo?</span>
-                <span class="wa-sim-chip" data-msg="Mnaunganishaje na duka au bidhaa zangu?">📦 Kuunganisha duka?</span>
-                <span class="wa-sim-chip" data-msg="Nataka kuanza kutumia leo!">🚀 Nataka kuanza leo!</span>
-              </div>
-
-              <!-- Interactive Active WhatsApp Input -->
-              <div class="wa-footer-bar">
-                <form id="waSimulatorForm" style="display: flex; width: 100%; align-items: center; gap: 0.5rem;">
-                  <input type="text" id="waSimInput" class="wa-input-active" placeholder="Uliza swali hapa live..." autocomplete="off">
-                  <button type="submit" class="wa-send-btn" title="Tuma"><i class="fas fa-paper-plane"></i></button>
-                </form>
-              </div>
-            </div>
-
-            <!-- Floating Dashboard Thumbnail -->
-            <div class="dashboard-peek-card">
-              <img src="Images/dashboard.jpg" alt="Dashboard" onerror="this.src='Images/analysis.png'">
-              <div>
-                <strong>Merchant Portal</strong>
-                <p>Live Orders & Analytics</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================
-       ROI & TIME SAVED CALCULATOR
-       ======================================================== -->
-  <section id="calculator" class="roi-section">
-    <div class="section-header">
-      <span class="section-tag green">Kikokotoo cha Faida</span>
-      <h2 class="section-title">Hesabu Muda na Pesa Unazookoa</h2>
-      <p class="section-subtitle">
-        Tazama jinsi Azirytech WhatsApp AI Sales Agent inavyookoa masaa ya kazi na kuongeza mapato ya biashara yako kila mwezi.
-      </p>
-    </div>
-
-    <div class="roi-card">
-      <div class="roi-controls">
-        <h3>Wateja Wangapi Wanakutumia Ujumbe?</h3>
-        <p>Sogeza kitelezi hapa chini kulingana na wastani wa jumbe/wateja unaopokea kwa siku kwenye WhatsApp yako:</p>
-
-        <div class="slider-group">
-          <div class="slider-header">
-            <span>Idadi ya Wateja / Siku:</span>
-            <span class="slider-val-badge" id="sliderValDisplay">50 Wateja / Siku</span>
-          </div>
-          <input type="range" id="roiSlider" class="roi-range" min="10" max="300" step="10" value="50">
-        </div>
-        
-        <div style="font-size: 0.88rem; color: var(--text-muted);">
-          <i class="fas fa-check-circle" style="color: var(--whatsapp);"></i> Inajumuisha uokoaji wa muda wa usiku na wikendi bila kuajiri mfanyakazi wa ziada.
-        </div>
-      </div>
-
-      <div class="roi-results">
-        <div class="roi-stat-box">
-          <div class="roi-stat-num" id="statHoursSaved">75+</div>
-          <div class="roi-stat-label">Masaa Yanayookolewa / Mwezi</div>
-        </div>
-
-        <div class="roi-stat-box">
-          <div class="roi-stat-num" id="statResponseTime">&lt; 2s</div>
-          <div class="roi-stat-label">Muda wa Kujibu Wateja</div>
-        </div>
-
-        <div class="roi-stat-box">
-          <div class="roi-stat-num" id="statConversionBoost">+38%</div>
-          <div class="roi-stat-label">Wastani wa Ongezeko la Mauzo</div>
-        </div>
-
-        <div class="roi-stat-box" style="border-color: var(--whatsapp); background: #ffffff;">
-          <div class="roi-stat-num" style="color: var(--whatsapp-dark);" id="statEstimatedVal">TZS 450K+</div>
-          <div class="roi-stat-label">Thamani ya Thamani Inayozalishwa</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================
-       CLIENT SOCIAL PROOF & TESTIMONIALS
-       ======================================================== -->
-  <section id="testimonials" class="testimonials-section">
-    <div class="section-header">
-      <span class="section-tag">Ushuhuda wa Wateja</span>
-      <h2 class="section-title">Wafanyabiashara Wanasemaje Kuhusu Sisi</h2>
-      <p class="section-subtitle">
-        Tazama maoni ya wamiliki wa maduka na biashara zinazotumia mifumo na masuluhisho yetu ya kiteknolojia.
-      </p>
-    </div>
-
-    <div class="testimonials-grid">
-      
-      <div class="testimonial-card">
-        <div class="stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="quote-text">
-          "Nilikuwa napoteza wateja wengi sana wanaotuma meseji usiku kuanzia saa nne usiku hadi asubuhi. Tangu niweke Aziry AI Sales Agent kwenye WhatsApp ya duka letu, inajibu, inatuma picha na kufunga oda hata nikiwa nimelala!"
-        </p>
-        <div class="client-meta">
-          <div class="client-avatar">JM</div>
-          <div class="client-info">
-            <strong>Juma M.</strong>
-            <span>Duka la Mitindo & Nguo, Kariakoo</span>
-          </div>
-          <div class="verified-tag"><i class="fas fa-check-circle"></i> Verified</div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="quote-text">
-          "BandoChap imekuwa suluhisho kubwa kwa ajili ya ununuzi wa vifurushi vya mtandao. Malipo ya USSD Push ya M-Pesa na Tigo yanafanyika haraka mno bila usumbufu. Azizi ni developer mwenye weledi wa hali ya juu."
-        </p>
-        <div class="client-meta">
-          <div class="client-avatar" style="background: var(--whatsapp-light); color: var(--whatsapp-dark);">SK</div>
-          <div class="client-info">
-            <strong>Said K.</strong>
-            <span>Digital Entrepreneur, Arusha</span>
-          </div>
-          <div class="verified-tag"><i class="fas fa-check-circle"></i> Verified</div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="quote-text">
-          "Ujuzi wa Azizi kwenye Python na Django umewezesha mifumo yetu ya data na uchanganuzi wa fedha kufanya kazi bila kukwama hata mara moja. Kasi yake na ubora wa code ni kiwango cha kimataifa."
-        </p>
-        <div class="client-meta">
-          <div class="client-avatar" style="background: #fef3c7; color: #b45309;">EM</div>
-          <div class="client-info">
-            <strong>Emmanuel M.</strong>
-            <span>Logistics & Retail Manager, Mwanza</span>
-          </div>
-          <div class="verified-tag"><i class="fas fa-check-circle"></i> Verified</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================================
-       ABOUT ME & SKILLS SECTION
-       ======================================================== -->
-  <section id="about" class="about">
-    <div class="section-header">
-      <span class="section-tag">About The Developer</span>
-      <h2 class="section-title">Innovating with Python, Django, Web & AI</h2>
-      <p class="section-subtitle">
-        Building resilient digital solutions, high-throughput Python backends, generative AI platforms, and automated systems that empower communities and enterprises.
-      </p>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text">
-        <h3>Who I Am</h3>
-        <p>
-          I'm <strong>Azizi Iddi Mohamed</strong>, founder of <strong>Aziry Tech</strong> and an AI & Data Science specialist based in Dar es Salaam, Tanzania. 
-          I specialize in architecting end-to-end software solutions — from robust <strong>Python & Django</strong> backends and REST APIs to enterprise Next.js platforms, fintech payment workflows, and AI automation engines.
-        </p>
-        <p>
-          At Aziry Tech, I develop products designed to solve tangible, real-world problems. Whether building intelligent WhatsApp sales engines, 
-          automated internet bundle platforms like <strong>BandoChap</strong>, corporate portals like <strong>Alpha Earth Resources</strong>, or analyzing data streams with Python & Pandas, 
-          my philosophy focuses on <em>speed, stability, and human-centric design</em>.
-        </p>
-
-        <div class="about-highlights">
-          <div class="highlight-item"><i class="fab fa-python" style="color: #d97706;"></i> Python & Django Web Architecture</div>
-          <div class="highlight-item"><i class="fas fa-check-circle"></i> Generative AI & WhatsApp Bots</div>
-          <div class="highlight-item"><i class="fas fa-check-circle"></i> Full-Stack Web & Next.js 14</div>
-          <div class="highlight-item"><i class="fas fa-check-circle"></i> Data Science (Pandas & Machine Learning)</div>
-        </div>
-
-        <div class="stats-grid">
-          <div class="stat-box">
-            <div class="stat-num" data-count="12">0</div>
-            <div class="stat-label">Projects Completed</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num" data-count="20">0</div>
-            <div class="stat-label">Happy Clients</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num" data-count="2">0</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num" data-count="99">0</div>
-            <div class="stat-label">Uptime %</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Skills Progress Cards (With Dedicated Python & Django) -->
-      <div class="skills-wrapper">
-        
-        <!-- Python & Django Architecture Card -->
-        <div class="skill-category-card" style="border-left: 4px solid #f59e0b;">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon" style="background: #fef3c7; color: #d97706;"><i class="fab fa-python"></i></div>
-            <h4>Python & Django Architecture</h4>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Python 3 (OOP, Asyncio, Scripting & Automation)</span><span>95%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 95%; background: linear-gradient(90deg, #d97706 0%, #f59e0b 100%);"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Django & Django REST Framework (DRF)</span><span>92%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 92%; background: linear-gradient(90deg, #059669 0%, #10b981 100%);"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Data Science (Pandas, NumPy & Scikit-Learn)</span><span>90%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 90%; background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI & WhatsApp Automation Card -->
-        <div class="skill-category-card" style="border-left: 4px solid #10b981;">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon" style="background: var(--whatsapp-light); color: var(--whatsapp-dark);"><i class="fas fa-robot"></i></div>
-            <h4>AI & WhatsApp Automation</h4>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>WhatsApp Web API & Baileys Engine</span><span>96%</span></div>
-              <div class="progress-track"><div class="progress-fill green" style="width: 96%;"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Anti-Ban Human Delay Systems</span><span>94%</span></div>
-              <div class="progress-track"><div class="progress-fill green" style="width: 94%;"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>NLP, DeepSeek & Gemini LLM Integration</span><span>88%</span></div>
-              <div class="progress-track"><div class="progress-fill green" style="width: 88%;"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Frontend & Modern Frameworks Card -->
-        <div class="skill-category-card">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
-            <h4>Frontend & Modern Frameworks</h4>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Next.js 14 / React / TypeScript</span><span>94%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 94%;"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>JavaScript (ES6+) / HTML5 / Tailwind</span><span>95%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Responsive UI & UX Architecture</span><span>92%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backend, APIs & Cloud Card -->
-        <div class="skill-category-card">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
-            <h4>Backend, APIs & Cloud</h4>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Node.js / Express & REST APIs</span><span>92%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>Mobile Money (USSD Push / MobiLipa)</span><span>90%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-info"><span>SQL, PostgreSQL & SQLite / Linux VPS</span><span>88%</span></div>
-              <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================
-       ALL PROJECTS SECTION (FILTERABLE & ACCESSIBLE)
-       ======================================================== -->
-  <section id="projects" class="portfolio-section">
-    <div class="section-header">
-      <span class="section-tag">Featured Portfolio</span>
-      <h2 class="section-title">My Projects & Innovations</h2>
-      <p class="section-subtitle">
-        Explore 12 production-grade applications, AI agents, fintech solutions, and corporate platforms built by Azizi Iddi Mohamed.
-      </p>
-    </div>
-
-    <!-- Filter Tabs -->
-    <div class="filter-tabs">
-      <button class="filter-btn active" data-filter="all">All Projects (12)</button>
-      <button class="filter-btn" data-filter="ai">AI & WhatsApp</button>
-      <button class="filter-btn" data-filter="web">Web & Fintech</button>
-      <button class="filter-btn" data-filter="data">Python & Data</button>
-    </div>
-
-    <div class="projects-grid">
-      
-      <!-- Project 1: WhatsApp AI Sales Agent (Flagship) -->
-      <div class="project-card featured-card" data-category="ai web">
-        <div class="card-top-badge">
-          <i class="fas fa-star"></i> Flagship Product
-        </div>
-        <div class="project-img-container">
-          <img src="Images/AiAgent.png" alt="WhatsApp AI Sales Agent" onerror="this.src='Images/dashboard.jpg'">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">WhatsApp AI Sales Agent</h3>
-          <div class="project-tags">
-            <span class="tag-pill green">WhatsApp API</span>
-            <span class="tag-pill green">Anti-Ban Engine</span>
-            <span class="tag-pill">Node.js</span>
-            <span class="tag-pill">NLP</span>
-          </div>
-          <p class="project-desc">
-            A state-of-the-art AI sales assistant that operates 24/7 on WhatsApp. Qualifies incoming inquiries, 
-            presents product catalogs, accepts orders, and automates follow-ups with human-like typing delays to prevent bans.
-          </p>
-          <div class="project-links">
-            <a href="https://wa.me/255692350076?text=Habari%20nataka%20kutest%20AI%20Sales%20Agent" target="_blank" class="card-btn btn-green">
-              <i class="fab fa-whatsapp"></i> Test Agent
-            </a>
-            <a href="#sales-agent" class="card-btn btn-subtle">
-              <i class="fas fa-info-circle"></i> View Details
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2: BandoChap - AI-Powered Internet Bundle E-Commerce Platform -->
-      <div class="project-card" data-category="web ai">
-        <div class="card-top-badge" style="background: var(--primary);">
-          <i class="fas fa-bolt"></i> Live Fintech
-        </div>
-        <div class="project-img-container">
-          <img src="Images/bandochap.jpg" alt="BandoChap Platform" onerror="this.src='Images/finance.webp'">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">BandoChap – AI Internet Bundle Platform</h3>
-          <div class="project-tags">
-            <span class="tag-pill">PHP / JS</span>
-            <span class="tag-pill green">MobiLipa USSD Push</span>
-            <span class="tag-pill green">BandoBot AI</span>
-            <span class="tag-pill">Telco API</span>
-          </div>
-          <p class="project-desc">
-            Modern digital telecommunications e-commerce platform for purchasing mobile data packages (Vodacom, Airtel, Yas, Halotel) 
-            in Tanzania. Features instant USSD Push mobile money checkout, live webhook verification, dual language, and BandoBot AI.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-external-link-alt"></i> View System
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3: Alpha Earth Resources Limited Corporate Platform -->
-      <div class="project-card" data-category="web">
-        <div class="card-top-badge" style="background: #0f172a;">
-          <i class="fas fa-gem"></i> Enterprise Mining
-        </div>
-        <div class="project-img-container">
-          <img src="Images/alpha-earth.jpg" alt="Alpha Earth Resources" onerror="this.src='Images/analysis.png'">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Alpha Earth Resources Limited Portal</h3>
-          <div class="project-tags">
-            <span class="tag-pill">Next.js 14</span>
-            <span class="tag-pill">TypeScript</span>
-            <span class="tag-pill">Tailwind CSS</span>
-            <span class="tag-pill">Mining & Energy</span>
-          </div>
-          <p class="project-desc">
-            An institutional corporate web platform for Alpha Earth Resources Limited, connecting global investors, regulators, 
-            and mineral rights holders across Tanzania's mining sector with geological exploration hubs and compliance portals.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-globe"></i> Visit Platform
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4: AI WhatsApp Recruitment Assistant -->
-      <div class="project-card" data-category="ai">
-        <div class="project-img-container">
-          <img src="Images/ai recruit.png" alt="AI Recruitment Assistant" onerror="this.src='Images/bot.png'">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">AI WhatsApp Recruitment Assistant</h3>
-          <div class="project-tags">
-            <span class="tag-pill green">WhatsApp Web API</span>
-            <span class="tag-pill">Node.js</span>
-            <span class="tag-pill">SQLite</span>
-          </div>
-          <p class="project-desc">
-            An intelligent HR bot that screens candidates, asks qualification questions, answers company FAQs, 
-            and schedules interviews with natural delays to preserve account safety.
-          </p>
-          <div class="project-links">
-            <a href="https://wa.me/255692350076?text=Habari%20nataka%20kujaribu%20Recruitment%20Bot" target="_blank" class="card-btn btn-green">
-              <i class="fab fa-whatsapp"></i> Test Agent
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 5: Personal Money & Task Management -->
-      <div class="project-card" data-category="web data">
-        <div class="project-img-container">
-          <img src="Images/finance.webp" alt="Personal Finance App">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Personal Money & Task Manager</h3>
-          <div class="project-tags">
-            <span class="tag-pill">JavaScript</span>
-            <span class="tag-pill">Analytics</span>
-            <span class="tag-pill">CSS3</span>
-          </div>
-          <p class="project-desc">
-            A comprehensive financial management dashboard allowing users to track daily expenses, monitor savings goals, 
-            and organize productivity tasks with interactive visualizations.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-external-link-alt"></i> Preview
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 6: Conversational AI Chat-Bot -->
-      <div class="project-card" data-category="ai">
-        <div class="project-img-container">
-          <img src="Images/bot.png" alt="AI Chatbot Platform">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Enterprise AI Chat-Bot Platform</h3>
-          <div class="project-tags">
-            <span class="tag-pill green">AI / NLP</span>
-            <span class="tag-pill">Express</span>
-            <span class="tag-pill">JavaScript</span>
-          </div>
-          <p class="project-desc">
-            Multi-platform conversational bot capable of answering complex user inquiries, recommending products, 
-            and escalating unresolved queries to human agents seamlessly.
-          </p>
-          <div class="project-links">
-            <a href="#ai" class="card-btn btn-main">
-              <i class="fas fa-comment-dots"></i> Try Live
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 7: Bodaboda Income Management -->
-      <div class="project-card" data-category="web data">
-        <div class="project-img-container">
-          <img src="Images/boda.png" alt="Bodaboda Management">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Bodaboda Income Management App</h3>
-          <div class="project-tags">
-            <span class="tag-pill">HTML5</span>
-            <span class="tag-pill">JavaScript</span>
-            <span class="tag-pill">Mobile Web</span>
-          </div>
-          <p class="project-desc">
-            A specialized digital ledger tailored for motorcycle and bajaj operators across Tanzania to log daily trips, 
-            fuel expenses, loan remittances, and net profits accurately.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-external-link-alt"></i> Preview
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 8: Sales Analytics & Visualization (Python/Pandas) -->
-      <div class="project-card" data-category="data">
-        <div class="project-img-container">
-          <img src="Images/analysis.png" alt="Sales Analytics">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Sales Analytics & Visualization</h3>
-          <div class="project-tags">
-            <span class="tag-pill" style="color: #b45309; background: #fef3c7; border-color: rgba(245, 158, 11, 0.4);"><i class="fab fa-python"></i> Python</span>
-            <span class="tag-pill">Pandas</span>
-            <span class="tag-pill">BI Dashboard</span>
-          </div>
-          <p class="project-desc">
-            Data science pipeline and interactive dashboard built in Python (Pandas/Matplotlib) that ingests business transactional records, 
-            calculates trend patterns, and highlights high-margin revenue streams.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-chart-pie"></i> View Model
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 9: Krevant Betting Intelligence Agent -->
-      <div class="project-card" data-category="data ai">
-        <div class="project-img-container">
-          <img src="Images/tip.png" alt="Krevant Tips">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Krevant Sports Intelligence Agent</h3>
-          <div class="project-tags">
-            <span class="tag-pill" style="color: #b45309; background: #fef3c7;"><i class="fab fa-python"></i> Python / ML</span>
-            <span class="tag-pill">JavaScript</span>
-            <span class="tag-pill">Statistics</span>
-          </div>
-          <p class="project-desc">
-            Predictive sports data analytics system providing statistical odds comparison, historical performance evaluation, 
-            and automated advisory tips.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-external-link-alt"></i> View System
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 10: Pesa Trucker Financial App -->
-      <div class="project-card" data-category="web">
-        <div class="project-img-container">
-          <img src="Images/pest.jpeg" alt="Pesa Trucker">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Pesa Trucker Financial Ledger</h3>
-          <div class="project-tags">
-            <span class="tag-pill">Web App</span>
-            <span class="tag-pill">JavaScript</span>
-            <span class="tag-pill">CSS3</span>
-          </div>
-          <p class="project-desc">
-            Lightweight cashflow tracker designed for local retail and logistics managers to record transactions, receipts, 
-            and balance sheets without complex accounting software.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-external-link-alt"></i> Preview
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 11: Family Attendance & Event System -->
-      <div class="project-card" data-category="web">
-        <div class="project-img-container">
-          <img src="Images/512.png" alt="Family Attendance System">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Family Attendance & Event System</h3>
-          <div class="project-tags">
-            <span class="tag-pill">Full-Stack</span>
-            <span class="tag-pill">Database</span>
-            <span class="tag-pill">Responsive</span>
-          </div>
-          <p class="project-desc">
-            Event organization and guest check-in portal designed for large community gatherings, tracking headcounts, 
-            contributions, and automated reminder alerts.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-main">
-              <i class="fas fa-external-link-alt"></i> Preview
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 12: WhatsApp Multi-Utility Bot -->
-      <div class="project-card" data-category="ai">
-        <div class="project-img-container">
-          <img src="Images/bot.png" alt="WhatsApp Bot">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">WhatsApp Multi-Utility Bot</h3>
-          <div class="project-tags">
-            <span class="tag-pill green">Baileys</span>
-            <span class="tag-pill">Node.js</span>
-            <span class="tag-pill">Automation</span>
-          </div>
-          <p class="project-desc">
-            A high-speed multipurpose WhatsApp robot featuring auto-replies, group moderation, status reaction tools, 
-            and anti-delete message recovery.
-          </p>
-          <div class="project-links">
-            <a href="https://wa.me/255692350076?text=Habari%20nataka%20kujaribu%20WhatsApp%20Utility%20Bot" target="_blank" class="card-btn btn-green">
-              <i class="fab fa-whatsapp"></i> Test Bot
-            </a>
-            <a href="https://github.com/Azi77ry" target="_blank" class="card-btn btn-subtle">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================================
-       AI ASSISTANT KNOWLEDGE SECTION
-       ======================================================== -->
-  <section id="ai" class="ai-section">
-    <div class="section-header">
-      <span class="section-tag green">Interactive Knowledge Base</span>
-      <h2 class="section-title">Ask Azizi's AI Assistant</h2>
-      <p class="section-subtitle">
-        Have a question about our Python & Django skills, WhatsApp AI Sales Agent, BandoChap, or tech stack? Ask below!
-      </p>
-    </div>
-
-    <div class="ai-card">
-      <div class="ai-card-header">
-        <img src="Images/logoaziry.png" alt="Azizi AI" class="ai-card-avatar" onerror="this.src='Images/fav1.png'">
-        <div class="ai-card-meta">
-          <h3>Azizi AI Knowledge Bot</h3>
-          <p>Trained on Python & Django development, WhatsApp AI architecture, and project portfolios</p>
-        </div>
-      </div>
-
-      <div class="ai-prompt-chips">
-        <span class="chip">Ujuzi wa Python na Django ni upi?</span>
-        <span class="chip">WhatsApp AI Sales Agent ni nini?</span>
-        <span class="chip">BandoChap inafanyaje kazi?</span>
-        <span class="chip">Bei ya WhatsApp bot ni kiasi gani?</span>
-        <span class="chip">Mawasiliano na namba ya simu</span>
-      </div>
-
-      <div id="ai-response" class="ai-response-box">
-        Habari! I am Azizi's AI assistant. Click one of the prompt chips above or type any question below to learn more about our projects and services.
-      </div>
-
-      <div class="ai-input-row">
-        <input type="text" id="ai-question" placeholder="Uliza swali kuhusu Python, Django, WhatsApp AI, au miradi ya Azizi...">
-        <button id="ai-submit"><i class="fas fa-paper-plane"></i> Ask AI</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================
-       CONTACT SECTION
-       ======================================================== -->
-  <section id="contact" class="contact-section">
-    <div class="section-header">
-      <span class="section-tag">Get In Touch</span>
-      <h2 class="section-title">Let's Build Something Exceptional</h2>
-      <p class="section-subtitle">
-        Ready to deploy the WhatsApp AI Sales Agent, hire Azizi for Python & Django systems, or build a custom software project? Reach out today.
-      </p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-info-list">
-        
-        <div class="contact-item-card">
-          <div class="contact-icon-wrap green">
-            <i class="fab fa-whatsapp"></i>
-          </div>
-          <div class="contact-text-meta">
-            <h4>WhatsApp / Direct Line</h4>
-            <a href="https://wa.me/255692350076?text=Habari%20Azizi%20Iddi%2C%20nahitaji%20huduma%20za%20Aziry%20Tech" target="_blank">+255 692 350 076</a>
-          </div>
-        </div>
-
-        <div class="contact-item-card">
-          <div class="contact-icon-wrap">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-text-meta">
-            <h4>Email Address</h4>
-            <a href="mailto:Aziziiddi555@gmail.com">Aziziiddi555@gmail.com</a>
-          </div>
-        </div>
-
-        <div class="contact-item-card">
-          <div class="contact-icon-wrap">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-text-meta">
-            <h4>Location</h4>
-            <p>Dar es Salaam, Tanzania</p>
-          </div>
-        </div>
-
-        <div class="contact-item-card">
-          <div class="contact-icon-wrap">
-            <i class="fas fa-clock"></i>
-          </div>
-          <div class="contact-text-meta">
-            <h4>Working Hours</h4>
-            <p>Mon - Sat (24/7 AI System Support)</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form-card">
-        <h3>Send a Message</h3>
-        <p>Fill out the form below and we will get back to you promptly.</p>
-
-        <form id="contactForm">
-          <div id="contactStatus" class="contact-status"></div>
-
-          <div class="form-group">
-            <label for="name">Your Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Mfano: Juma Rashid" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address or Phone</label>
-            <input type="text" id="email" name="email" placeholder="email@domain.com au 0692350076" required>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Your Message or Project Details</label>
-            <textarea id="message" name="message" placeholder="Elezea huduma au mradi unaohitaji..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
+        <form id="contactForm" class="form" novalidate>
+          <h3>Or send a message</h3>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <label for="email">Email or phone</label>
+          <input id="email" name="email" type="text" autocomplete="email" required>
+          <label for="message">What do you need?</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button class="btn btn-ink" type="submit">Send message</button>
+          <p id="contactStatus" class="status" role="status"></p>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ========================================================
-       FOOTER
-       ======================================================== -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <h4>Aziry<span>Tech</span></h4>
-        <p>Innovative Python & Django Backends, AI Systems & Data Engineering by Azizi Iddi Mohamed.</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#sales-agent">WhatsApp AI</a>
-        <a href="#about">About & Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#ai">AI Assistant</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p class="copyright">&copy; 2026 Azizi Iddi Mohamed. All rights reserved.</p>
-      <p class="copyright" style="color: var(--primary); font-weight: 600;">Powered by Aziry Technology.</p>
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <p><strong>Aziry Tech</strong> — software for Tanzanian business, by Azizi Iddi Mohamed.</p>
+      <p>&copy; <span id="year">2026</span> Azizi Iddi Mohamed</p>
     </div>
   </footer>
 
-  <!-- Floating Chatbot Widget Button -->
-  <div class="chatbot-toggle" title="Chat with Azizi AI">
-    <i class="fas fa-robot"></i>
+  <!-- Assistant -->
+  <button class="assist-toggle" aria-expanded="false" aria-controls="assistant">
+    <svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span>Ask Azizi's assistant</span>
+  </button>
+  <div id="assistant" class="assistant" role="dialog" aria-label="Azizi's assistant" hidden>
+    <div class="assist-head">
+      <strong>Azizi's assistant</strong>
+      <button class="assist-close" aria-label="Close"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="assist-log" aria-live="polite">
+      <p class="msg bot">Habari! Ask about prices, the WhatsApp agent, BandoChap or Azizi's skills.</p>
+    </div>
+    <div class="assist-chips">
+      <button type="button" data-q="bei">Bei?</button>
+      <button type="button" data-q="skills">Skills</button>
+      <button type="button" data-q="bandochap">BandoChap</button>
+      <button type="button" data-q="contact">Contact</button>
+    </div>
+    <form class="assist-input">
+      <label for="assistInput" class="sr">Your question</label>
+      <input id="assistInput" type="text" placeholder="Type a question" autocomplete="off">
+      <button type="submit" aria-label="Send"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></button>
+    </form>
   </div>
 
-  <!-- Back to Top Button -->
-  <div class="back-to-top" title="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </div>
-
-  <!-- Floating Chatbot Window -->
-  <div id="ai-chatbot-interface" class="ai-chatbot-window">
-    <div class="chatbot-header">
-      <h3><i class="fas fa-robot"></i> Azizi AI Assistant</h3>
-      <button class="chatbot-close-btn">&times;</button>
-    </div>
-    <div class="chatbot-messages">
-      <div class="message ai-message">
-        <p>Habari! I am Azizi's AI assistant. How can I help you today? You can ask about our Python & Django skills, WhatsApp AI Sales Agent, BandoChap, or our custom software services.</p>
-      </div>
-    </div>
-    <div class="chatbot-input-area">
-      <input type="text" id="user-input" placeholder="Type your question...">
-      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="frontend-config.js"></script>
-  <script src="ai-knowledge.js"></script>
-  <script src="script.js"></script>
+  <script src="frontend-config.js" defer></script>
+  <script src="ai-knowledge.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

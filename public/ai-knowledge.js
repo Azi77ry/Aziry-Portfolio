@@ -14,11 +14,12 @@ const aiKnowledge = {
 
   // Flagship WhatsApp AI Sales Agent
   "whatsapp ai": "<strong>WhatsApp AI Sales Agent</strong> ndio mfumo wetu mkuu wa kibiashara (Flagship Product)! Unageuza WhatsApp kuwa mashine ya mauzo masaa 24/7: <br>• Inajibu wateja papo hapo (< 2s)<br>• Inachukua oda na kufuatilia malipo<br>• Ina Anti-Ban Protection Engine kuzuia namba kufungiwa<br>• Inajifunza bidhaa na bei zako.<br>Bofya kitufe cha 'Jaribu Live Demo' au wasiliana nasi kwa WhatsApp!",
-  "sales agent": "Azirytech WhatsApp AI Sales Agent ni msaidizi wa kisasa wa kidijitali anayefanya kazi kama muuzaji wako stadi 24/7. Hukosa wateja kamwe, inawasaidia kuchagua bidhaa, na kuongeza faida ya biashara kwa wastani wa +45%!",
+  "sales agent": "Azirytech WhatsApp AI Sales Agent ni msaidizi wa kisasa wa kidijitali anayefanya kazi kama muuzaji wako stadi 24/7. Hakosi mteja hata mmoja, inawasaidia kuchagua bidhaa, na kuongeza faida ya biashara kwa wastani wa +45%!",
   "bei": "Bei ya kuanza kutumia WhatsApp AI Sales Agent ni <strong>TZS 30,000 tu kwa mwezi</strong>! Kifurushi hiki kinajumuisha mafunzo ya mfumo, anti-ban guard, na usaidizi wa kiufundi masaa 24.",
   "price": "Pricing for our WhatsApp AI Sales Agent starts at <strong>TZS 30,000 per month</strong> with full anti-ban protection, custom knowledge base, and 24/7 automation.",
   "cost": "Pricing starts at just <strong>TZS 30,000/month</strong> for full automation, order taking, and lead qualification.",
-  "anti ban": "Mfumo wetu una <strong>Anti-Ban Human Simulation Engine</strong> inayojumuisha ucheleweshaji wa kawaida wa uandishi (natural typing delays), vipindi vya kubadilika vya utumaji, na ulinzi wa sessions ili namba yako ya WhatsApp iwe salama 100%.",
+  "ban": "Mfumo unaandika kwa kasi ya binadamu, una mipaka ya ujumbe kwa siku, na unaheshimu wateja wanaojiondoa — hii inapunguza sana hatari ya namba kufungiwa.",
+  "anti ban": "Mfumo wetu una <strong>Anti-Ban Human Simulation Engine</strong> inayojumuisha ucheleweshaji wa kawaida wa uandishi (natural typing delays), vipindi vya kubadilika vya utumaji, na ulinzi wa sessions ili kupunguza hatari ya namba yako ya WhatsApp kufungiwa.",
   "demo": "Unaweza kujaribu Live Demo ya WhatsApp AI Sales Agent mara moja kwa kubofya kitufe cha WhatsApp au kutuma ujumbe kwenda namba <strong>+255 692 350 076</strong>!",
 
   // BandoChap
