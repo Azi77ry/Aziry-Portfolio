@@ -8,6 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const targets = $$('main > section:not(.hero) .wrap > *, .features > div, .quotes > figure, .skills > div, .index li, details');
+    targets.forEach((el) => el.classList.add('reveal'));
+    const ro = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const sibs = Array.from(e.target.parentElement.children);
+        e.target.style.transitionDelay = Math.min(sibs.indexOf(e.target), 5) * 70 + 'ms';
+        e.target.classList.add('in');
+        ro.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    targets.forEach((el) => ro.observe(el));
+  }
+
+  // Cursor spotlight on glass cards
+  $$('.spot').forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+
   // Mobile menu
   const menuBtn = $('.menu-btn');
   const navList = $('#nav-list');

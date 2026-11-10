@@ -9,7 +9,7 @@
   <meta name="author" content="Azizi Iddi Mohamed">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://www.azirytech.online/">
-  <meta name="theme-color" content="#17154F">
+  <meta name="theme-color" content="#0B0A24">
 
   <!-- Local SEO -->
   <meta name="geo.region" content="TZ-02">
@@ -44,7 +44,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Unbounded:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap">
   <link rel="stylesheet" href="style.css">
 
   <!-- Structured data -->
@@ -174,9 +174,11 @@
     <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
   </svg>
 
+  <div class="bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-head" id="top">
+  <header class="site-head glass" id="top">
     <a href="#top" class="brand" aria-label="Aziry Tech home">
       <img src="img/icon-192.png" alt="" width="34" height="34">
       <span>Aziry Tech</span>
@@ -198,22 +200,13 @@
 
   <main id="main">
 
-    <!-- HERO: built like a kanga — pindo (border), mji (centre), ujumbe (message) -->
-    <section class="kanga" aria-labelledby="hero-title">
-      <div class="pindo" aria-hidden="true"></div>
-      <div class="mji">
-        <svg class="medallion" viewBox="0 0 400 400" aria-hidden="true">
-          <circle cx="200" cy="200" r="186" />
-          <circle cx="200" cy="200" r="150" />
-          <path d="M200 70 L318 300 H82 Z" />
-          <path d="M200 120 L276 270 H124 Z" />
-          <circle cx="200" cy="232" r="20" class="node" />
-        </svg>
-
-        <div class="mji-copy">
-          <p class="kicker">Founder of Aziry Tech, Dar es Salaam</p>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="pill"><span class="dot" aria-hidden="true"></span> Available for projects in Dar es Salaam</p>
           <h1 id="hero-title">
-            <span class="name">Azizi Iddi<br>Mohamed</span>
+            <span class="name">Azizi Iddi Mohamed</span>
             <span class="role">Python, Django &amp; AI developer building sales tools for Tanzanian business.</span>
           </h1>
           <p class="lede">
@@ -224,10 +217,48 @@
             <a class="btn btn-wa" href="https://wa.me/255692350076?text=Habari%20Aziry%20Tech%2C%20nataka%20kujaribu%20WhatsApp%20AI%20Sales%20Agent" target="_blank" rel="noopener">
               <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Try the bot on WhatsApp
             </a>
-            <a class="btn btn-ghost" href="#work">See my work</a>
+            <a class="btn btn-glass" href="#work">See my work</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>Projects shipped</dt><dd>12</dd></div>
+            <div><dt>Clients served</dt><dd>20+</dd></div>
+            <div><dt>Agent uptime</dt><dd>24/7</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="glass profile spot">
+            <div class="profile-top">
+              <img src="img/icon-192.png" alt="" width="64" height="64">
+              <div>
+                <strong>Aziry Tech</strong>
+                <span>Founder &amp; lead engineer</span>
+              </div>
+            </div>
+            <div class="code">
+              <span class="c-k">from</span> aziry <span class="c-k">import</span> SalesAgent<br>
+              agent = SalesAgent(lang=<span class="c-s">"sw"</span>)<br>
+              agent.reply(<span class="c-s">"Bei gani?"</span>)<br>
+              <span class="c-c"># → TZS 30,000 / mwezi ✓</span>
+            </div>
+            <div class="chips"><span>Python</span><span>Django</span><span>Next.js</span><span>LLMs</span><span>M-Pesa</span></div>
+          </div>
+          <div class="glass float f1">
+            <span class="f-ico wa"><svg class="ico"><use href="#i-wa"/></svg></span>
+            <div><strong>New order</strong><span>Replied in 2s</span></div>
+          </div>
+          <div class="glass float f2">
+            <span class="f-ico"><svg class="ico"><use href="#i-chat"/></svg></span>
+            <div><strong>Swahili + English</strong><span>Auto-detected</span></div>
           </div>
         </div>
-        <p class="ujumbe" lang="sw">Mteja hasubiri. Biashara yako ijibu saa ishirini na nne.</p>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Python</span><span>Django</span><span>Django REST</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>Node.js</span><span>WhatsApp API</span><span>OpenAI</span><span>Gemini</span><span>DeepSeek</span><span>PostgreSQL</span><span>Pandas</span><span>M-Pesa</span><span>Airtel Money</span><span>Tailwind</span>
+          <span>Python</span><span>Django</span><span>Django REST</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>Node.js</span><span>WhatsApp API</span><span>OpenAI</span><span>Gemini</span><span>DeepSeek</span><span>PostgreSQL</span><span>Pandas</span><span>M-Pesa</span><span>Airtel Money</span><span>Tailwind</span>
+        </div>
       </div>
     </section>
 
@@ -241,10 +272,10 @@
           </p>
 
           <dl class="features">
-            <div><dt>Replies in about two seconds</dt><dd lang="sw">Anajibu wateja usiku, wikendi na sikukuu, bila kuchoka.</dd></div>
-            <div><dt>Keeps your number safe</dt><dd lang="sw">Anaandika kwa kasi ya binadamu na ana mipaka ya ujumbe kwa siku.</dd></div>
-            <div><dt>Knows your shop</dt><dd lang="sw">Tunampa orodha ya bidhaa, bei na sera zako, kwa Kiswahili na Kiingereza.</dd></div>
-            <div><dt>Shows you every order</dt><dd lang="sw">Dashibodi ya moja kwa moja ya mauzo na mazungumzo yote.</dd></div>
+            <div class="glass spot"><dt>Replies in about two seconds</dt><dd lang="sw">Anajibu wateja usiku, wikendi na sikukuu, bila kuchoka.</dd></div>
+            <div class="glass spot"><dt>Keeps your number safe</dt><dd lang="sw">Anaandika kwa kasi ya binadamu na ana mipaka ya ujumbe kwa siku.</dd></div>
+            <div class="glass spot"><dt>Knows your shop</dt><dd lang="sw">Tunampa orodha ya bidhaa, bei na sera zako, kwa Kiswahili na Kiingereza.</dd></div>
+            <div class="glass spot"><dt>Shows you every order</dt><dd lang="sw">Dashibodi ya moja kwa moja ya mauzo na mazungumzo yote.</dd></div>
           </dl>
 
           <div class="price-row">
@@ -256,7 +287,7 @@
         </div>
 
         <!-- Live simulator -->
-        <div class="phone" aria-label="WhatsApp agent demo">
+        <div class="phone glass" aria-label="WhatsApp agent demo">
           <div class="phone-head">
             <img src="img/icon-192.png" alt="" width="36" height="36">
             <div>
@@ -282,7 +313,7 @@
       </div>
 
       <!-- Estimator -->
-      <div class="wrap estimator" aria-labelledby="est-title">
+      <div class="wrap"><div class="estimator glass" aria-labelledby="est-title">
         <div>
           <h3 id="est-title" lang="sw">Unaokoa muda kiasi gani?</h3>
           <label for="roiSlider" lang="sw">Wateja wanaokutumia ujumbe kwa siku: <output id="sliderValDisplay" for="roiSlider">50</output></label>
@@ -294,7 +325,7 @@
           <div><dt lang="sw">Muda wa kujibu</dt><dd>&lt; 2s</dd></div>
           <div><dt lang="sw">Mazungumzo kwa mwezi</dt><dd id="statChats">1,500</dd></div>
         </dl>
-      </div>
+      </div></div>
     </section>
 
     <!-- WORK -->
@@ -303,7 +334,7 @@
         <h2 id="work-title">Selected work</h2>
         <p class="section-intro">Twelve products shipped for shops, fintech and industry in Tanzania. Three of them carry most of the weight.</p>
 
-        <article class="feature" id="project-agent">
+        <article class="feature glass spot" id="project-agent">
           <img src="img/whatsapp-ai-sales-agent.webp" alt="Aziry WhatsApp AI Sales Agent taking an order inside a WhatsApp chat" width="1200" height="1425" loading="lazy" decoding="async" class="tall">
           <div class="feature-text">
             <h3>WhatsApp AI Sales Agent</h3>
@@ -316,7 +347,7 @@
           </div>
         </article>
 
-        <article class="feature flip" id="project-bandochap">
+        <article class="feature glass spot flip" id="project-bandochap">
           <img src="img/bandochap.webp" alt="BandoChap website for buying Vodacom, Airtel, Yas and Halotel data bundles" width="1200" height="670" loading="lazy" decoding="async">
           <div class="feature-text">
             <h3>BandoChap</h3>
@@ -326,7 +357,7 @@
           </div>
         </article>
 
-        <article class="feature" id="project-alpha">
+        <article class="feature glass spot" id="project-alpha">
           <img src="img/alpha-earth-resources.webp" alt="Alpha Earth Resources Limited corporate website for Tanzania's mining sector" width="1200" height="670" loading="lazy" decoding="async">
           <div class="feature-text">
             <h3>Alpha Earth Resources Limited</h3>
@@ -336,7 +367,7 @@
           </div>
         </article>
 
-        <div class="more">
+        <div class="more glass">
           <div class="more-head">
             <h3>More projects</h3>
             <div class="filters" role="group" aria-label="Filter projects">
@@ -412,15 +443,15 @@
       <div class="wrap">
         <h2 id="voices-title">What clients say</h2>
         <div class="quotes">
-          <figure>
+          <figure class="glass spot">
             <blockquote lang="sw">“Nilikuwa napoteza wateja wengi sana wanaotuma meseji usiku kuanzia saa nne usiku hadi asubuhi. Tangu niweke Aziry AI Sales Agent kwenye WhatsApp ya duka letu, inajibu, inatuma picha na kufunga oda hata nikiwa nimelala!”</blockquote>
             <figcaption><strong>Juma M.</strong> Fashion shop, Kariakoo</figcaption>
           </figure>
-          <figure>
+          <figure class="glass spot">
             <blockquote lang="sw">“BandoChap imekuwa suluhisho kubwa kwa ajili ya ununuzi wa vifurushi vya mtandao. Malipo ya USSD Push ya M-Pesa na Tigo yanafanyika haraka mno bila usumbufu. Azizi ni developer mwenye weledi wa hali ya juu.”</blockquote>
             <figcaption><strong>Said K.</strong> Digital entrepreneur, Arusha</figcaption>
           </figure>
-          <figure>
+          <figure class="glass spot">
             <blockquote lang="sw">“Ujuzi wa Azizi kwenye Python na Django umewezesha mifumo yetu ya data na uchanganuzi wa fedha kufanya kazi bila kukwama hata mara moja. Kasi yake na ubora wa code ni kiwango cha kimataifa.”</blockquote>
             <figcaption><strong>Emmanuel M.</strong> Logistics &amp; retail, Mwanza</figcaption>
           </figure>
@@ -443,19 +474,19 @@
         </div>
 
         <div class="skills">
-          <div>
+          <div class="glass spot">
             <h3>Python &amp; data</h3>
             <ul><li>Python 3 (async, automation)</li><li>Django &amp; Django REST Framework</li><li>Pandas, NumPy, scikit-learn</li><li>PostgreSQL &amp; SQLite</li></ul>
           </div>
-          <div>
+          <div class="glass spot">
             <h3>AI &amp; WhatsApp</h3>
             <ul><li>WhatsApp Web API &amp; Baileys</li><li>OpenAI, Gemini &amp; DeepSeek LLMs</li><li>Human-paced messaging</li><li>Swahili &amp; English bots</li></ul>
           </div>
-          <div>
+          <div class="glass spot">
             <h3>Web</h3>
             <ul><li>Next.js 14, React, TypeScript</li><li>Node.js &amp; Express</li><li>Tailwind CSS</li><li>Responsive UI</li></ul>
           </div>
-          <div>
+          <div class="glass spot">
             <h3>Payments &amp; ops</h3>
             <ul><li>M-Pesa, Airtel Money, HaloPesa</li><li>USSD push (MobiLipa)</li><li>Webhooks</li><li>Linux VPS &amp; Git</li></ul>
           </div>
@@ -511,7 +542,7 @@
           </ul>
         </div>
 
-        <form id="contactForm" class="form" novalidate>
+        <form id="contactForm" class="form glass" novalidate>
           <h3>Or send a message</h3>
           <label for="name">Your name</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
@@ -537,7 +568,7 @@
   <button class="assist-toggle" aria-expanded="false" aria-controls="assistant">
     <svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span>Ask Azizi's assistant</span>
   </button>
-  <div id="assistant" class="assistant" role="dialog" aria-label="Azizi's assistant" hidden>
+  <div id="assistant" class="assistant glass" role="dialog" aria-label="Azizi's assistant" hidden>
     <div class="assist-head">
       <strong>Azizi's assistant</strong>
       <button class="assist-close" aria-label="Close"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
